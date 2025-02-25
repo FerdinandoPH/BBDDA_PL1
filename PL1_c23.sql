@@ -14,9 +14,10 @@ SHOW max_parallel_workers_per_gather;
 COMMIT;
 SELECT pg_sleep(1);
 BEGIN;
-SELECT blks_read, blks_hit
-FROM pg_stat_database
-WHERE datname = current_database();
+
+SELECT relname, heap_blks_read, heap_blks_hit
+FROM pg_statio_user_tables
+WHERE relname = 'productos';
 
 SELECT *
 FROM pg_statio_user_indexes;
