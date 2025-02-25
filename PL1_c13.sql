@@ -17,5 +17,7 @@ CREATE EXTENSION IF NOT EXISTS pageinspect;
 
 SELECT * FROM bt_metap('idx_tree_producto_id');
 
-SELECT COUNT(blkno), btpo_level FROM bt_multi_page_stats('idx_tree_producto_id', 1,-1) GROUP BY btpo_level; 
+SELECT COUNT(blkno), btpo_level FROM bt_multi_page_stats('idx_tree_producto_id', 1,-1) GROUP BY btpo_level;
+
+SELECT COUNT(*), btpo_level, live_items FROM bt_multi_page_stats('idx_tree_producto_id', 1,-1) GROUP BY btpo_level, live_items;
 COMMIT;

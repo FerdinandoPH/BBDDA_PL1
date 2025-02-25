@@ -12,4 +12,9 @@ SELECT relname, relfilenode, reltablespace, relpages, reltuples
 FROM pg_class
 WHERE relname = 'idx_hash_producto_id';
 
+CREATE EXTENSION IF NOT EXISTS pageinspect;
+
+SELECT ntuples, maxbucket FROM hash_metapage_info(get_raw_page('idx_hash_producto_id',0));
+
+
 COMMIT;
