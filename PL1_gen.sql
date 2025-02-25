@@ -12,4 +12,4 @@ CREATE TABLE productos(
 );
 \copy productos FROM 'productos.csv' DELIMITER ',' CSV;
 
-\q
+COMMIT;

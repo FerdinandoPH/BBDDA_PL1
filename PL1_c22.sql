@@ -16,6 +16,7 @@ CREATE TABLE productos(
 \copy productos FROM 'productos.csv' DELIMITER ',' CSV;
 
 CREATE INDEX IF NOT EXISTS idx_hash_producto_id ON productos USING hash (producto_id);
+CREATE INDEX IF NOT EXISTS idx_hash_precio ON productos USING hash (precio);
 CREATE INDEX IF NOT EXISTS idx_tree_precio ON productos(precio);
 
 COMMIT;
