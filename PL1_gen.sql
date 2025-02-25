@@ -6,7 +6,7 @@ CREATE DATABASE PL1;
 BEGIN;
 CREATE TABLE productos(
     producto_id INTEGER PRIMARY KEY,
-    nombre CHAR(50),
+    nombre CHAR(20),
     stock INTEGER,
     precio INTEGER
 );
