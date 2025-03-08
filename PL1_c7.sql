@@ -8,4 +8,8 @@ WHERE producto_id IN (
     ORDER BY random()
     LIMIT 4000000
 );
+
+SELECT pg_size_pretty(pg_relation_size('productos')) AS table_size, pg_relation_size('productos') / 8192 AS blocks_used;
 COMMIT;
+
+-- VACUUM FULL

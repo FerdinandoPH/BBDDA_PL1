@@ -1,7 +1,3 @@
-\c postgres
-
-DROP DATABASE IF EXISTS PL1;
-CREATE DATABASE PL1;
 \c pl1
 BEGIN;
 
@@ -23,4 +19,17 @@ CREATE TABLE productos3_3500 PARTITION OF productos3 FOR VALUES FROM (3501) TO (
 CREATE TABLE productos3_4000 PARTITION OF productos3 FOR VALUES FROM (4001) TO (4501);
 CREATE TABLE productos3_4500 PARTITION OF productos3 FOR VALUES FROM (4501) TO (5001);
 
-\q
+INSERT INTO productos3(producto_id, nombre, stock, precio) SELECT * FROM productos;
+
+DO $$
+DECLARE
+    i INTEGER := 0;
+BEGIN
+    -- Para cada partición, comprobar el tamaño con pg_relation_size y el número de bloques con pg_relation_size / 8192
+    FOR i IN 0..4500 BY 500 LOOP
+        RAISE NOTICE 'Tamaño de la tabla productos3_%: %', i, pg_size_pretty(pg_relation_size('productos3_' || i));
+        RAISE NOTICE 'Número de bloques de la tabla productos3_%: %', i, pg_relation_size('productos3_' || i) / 8192;
+    END LOOP;
+END $$;
+
+COMMIT;
