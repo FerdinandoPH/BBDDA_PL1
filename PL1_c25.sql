@@ -5,7 +5,7 @@ BEGIN;
 SELECT pg_stat_reset();
 SET max_parallel_workers_per_gather = 0;
 DISCARD PLANS;
-\o salida.txt
+\o salida.txt       -- Descomentar la consulta que se quiera hacer y comentar las demás
 -- SELECT * FROM productos WHERE stock = 100 AND precio = 1000;
 -- SELECT * FROM productos WHERE stock = 100 OR precio = 1000;
 -- SELECT * FROM productos WHERE stock = 100;
