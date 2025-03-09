@@ -10,7 +10,6 @@ DELETE FROM productos
 WHERE producto_id = 25000001;
 
 -- \o salida.txt
--- EXPLAIN (ANALYZE, BUFFERS) SELECT * FROM productos WHERE precio = 2000;
 -- SELECT * FROM productos WHERE precio = 2000;
 -- \o
 
@@ -33,7 +32,6 @@ WHERE producto_id = 25000001;
 -- BEGIN;
 -- SELECT pg_stat_reset();
 -- \o salida.txt
--- EXPLAIN (ANALYZE, BUFFERS) SELECT * FROM productos WHERE producto_id = 6000;
 -- SELECT * FROM productos WHERE producto_id = 6000;
 -- \o
 
@@ -57,7 +55,6 @@ WHERE producto_id = 25000001;
 -- BEGIN;
 -- SELECT pg_stat_reset();
 -- \o salida.txt
--- EXPLAIN (ANALYZE, BUFFERS) SELECT * FROM productos WHERE producto_id BETWEEN 180000 AND 200000;
 -- SELECT * FROM productos WHERE producto_id BETWEEN 180000 AND 200000;
 -- \o
 
@@ -81,7 +78,6 @@ WHERE producto_id = 25000001;
 -- BEGIN;
 -- SELECT pg_stat_reset();
 -- \o salida.txt
--- EXPLAIN (ANALYZE, BUFFERS) SELECT * FROM productos WHERE precio > 4000;
 -- SELECT * FROM productos WHERE precio > 4000;
 -- \o
 
@@ -105,7 +101,6 @@ WHERE producto_id = 25000001;
 -- BEGIN;
 -- SELECT pg_stat_reset();
 -- \o salida.txt
--- EXPLAIN (ANALYZE, BUFFERS) SELECT precio, COUNT(stock) FROM productos GROUP BY precio ORDER BY precio;
 -- SELECT precio, COUNT(stock) FROM productos GROUP BY precio ORDER BY precio;
 -- \o
 
@@ -129,7 +124,7 @@ WHERE producto_id = 25000001;
 BEGIN;
 SELECT pg_stat_reset();
 \o salida.txt
-EXPLAIN (ANALYZE, BUFFERS) INSERT INTO productos(producto_id, nombre, stock, precio) VALUES(25000001, 'prod_25000001', 100, 1000);
+INSERT INTO productos(producto_id, nombre, stock, precio) VALUES(25000001, 'prod_25000001', 100, 1000);
 \o
 
 
@@ -153,7 +148,7 @@ COMMIT;
 BEGIN;
 SELECT pg_stat_reset();
 \o salida.txt
-EXPLAIN (ANALYZE, BUFFERS) UPDATE productos SET precio = 2000 WHERE producto_id = 25000001;
+UPDATE productos SET precio = 2000 WHERE producto_id = 25000001;
 \o
 
 
