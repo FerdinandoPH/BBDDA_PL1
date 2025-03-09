@@ -5,6 +5,6 @@ DROP INDEX IF EXISTS idx_hash_precio;
 
 BEGIN;
 
-CREATE INDEX IF NOT EXISTS idx_multi ON productos(producto_id, precio);
+CREATE INDEX IF NOT EXISTS idx_multi ON productos(stock, precio);
 
 COMMIT;

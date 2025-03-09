@@ -6,8 +6,12 @@ SELECT pg_stat_reset();
 SET max_parallel_workers_per_gather = 0;
 DISCARD PLANS;
 \o salida.txt
-EXPLAIN (ANALYZE, BUFFERS) SELECT * FROM productos WHERE precio = 1000;
+EXPLAIN (ANALYZE, BUFFERS) SELECT * FROM productos WHERE stock = 100 AND precio = 1000;
+-- SELECT * FROM productos WHERE stock = 100 AND precio = 1000;
+-- SELECT * FROM productos WHERE stock = 100 OR precio = 1000;
+-- SELECT * FROM productos WHERE stock = 100;
 SELECT * FROM productos WHERE precio = 1000;
+
 \o
 SHOW max_parallel_workers_per_gather;
 
