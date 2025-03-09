@@ -6,6 +6,8 @@ SELECT pg_stat_reset();
 SET max_parallel_workers_per_gather = 0; -- Desactivar paralelismo para asegurarse que las medidas de estadísticas sean consistentes
 DISCARD PLANS;
 
+DELETE FROM productos
+WHERE producto_id = 25000001;
 
 \o salida.txt
 SELECT * FROM productos WHERE precio = 2000;
@@ -77,29 +79,6 @@ BEGIN;
 SELECT pg_stat_reset();
 \o salida.txt
 SELECT * FROM productos WHERE precio > 4000;
-\o
-
-
-COMMIT;
-SELECT pg_sleep(1);
-BEGIN;
-
-SELECT relname, heap_blks_read, heap_blks_hit
-FROM pg_statio_user_tables
-WHERE relname = 'productos';
-
-SELECT indexrelname, idx_blks_read, idx_blks_hit
-FROM pg_statio_user_indexes;
-COMMIT;
-
-
-
-
-
-BEGIN;
-SELECT pg_stat_reset();
-\o salida.txt
-SELECT precio, COUNT(stock) FROM productos GROUP BY precio ORDER BY precio;
 \o
 
 
