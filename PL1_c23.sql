@@ -9,7 +9,6 @@ DISCARD PLANS;
 
 
 -- \o salida.txt
--- EXPLAIN (ANALYZE, BUFFERS) SELECT * FROM productos WHERE precio = 2000;
 -- SELECT * FROM productos WHERE precio = 2000;
 -- \o
 -- SHOW max_parallel_workers_per_gather;
@@ -33,7 +32,6 @@ DISCARD PLANS;
 -- BEGIN;
 -- SELECT pg_stat_reset();
 -- \o salida.txt
--- EXPLAIN (ANALYZE, BUFFERS) SELECT * FROM productos WHERE producto_id = 6000;
 -- SELECT * FROM productos WHERE producto_id = 6000;
 -- \o
 
@@ -57,7 +55,6 @@ DISCARD PLANS;
 -- BEGIN;
 -- SELECT pg_stat_reset();
 -- \o salida.txt
--- EXPLAIN (ANALYZE, BUFFERS) SELECT * FROM productos WHERE producto_id BETWEEN 180000 AND 200000;
 -- SELECT * FROM productos WHERE producto_id BETWEEN 180000 AND 200000;
 -- \o
 
@@ -81,7 +78,6 @@ DISCARD PLANS;
 -- BEGIN;
 -- SELECT pg_stat_reset();
 -- \o salida.txt
--- EXPLAIN (ANALYZE, BUFFERS) SELECT * FROM productos WHERE precio > 4000;
 -- SELECT * FROM productos WHERE precio > 4000;
 -- \o
 
@@ -105,7 +101,6 @@ DISCARD PLANS;
 BEGIN;
 SELECT pg_stat_reset();
 \o salida.txt
-EXPLAIN (ANALYZE, BUFFERS) SELECT precio, COUNT(stock) FROM productos GROUP BY precio ORDER BY precio;
 SELECT precio, COUNT(stock) FROM productos GROUP BY precio ORDER BY precio;
 \o
 
