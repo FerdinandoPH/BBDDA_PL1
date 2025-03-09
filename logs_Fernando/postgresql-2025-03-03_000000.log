@@ -1,0 +1,6 @@
+[09066309P 08134385K] ::1(62479)WARNING:  ya hay una transacción en curso
+[09066309P 08134385K] ::1(62479)SENTENCIA:  BEGIN;
+[09066309P 08134385K] ::1(62520)WARNING:  ya hay una transacción en curso
+[09066309P 08134385K] ::1(62520)SENTENCIA:  BEGIN;
+[09066309P 08134385K] ::1(62520)LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	

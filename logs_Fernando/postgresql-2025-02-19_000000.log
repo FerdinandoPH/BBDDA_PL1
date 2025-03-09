@@ -1,0 +1,379 @@
+[09066309P 08134385K] ::1(56445)LOG:  sentencia: DELETE FROM productos
+	WHERE producto_id IN (
+	    SELECT producto_id 
+	    FROM productos 
+	    ORDER BY random()
+	    LIMIT 4000000
+	);
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 509 búfers (3.1%); 0 archivos WAL añadidos, 14 eliminados, 19 reciclados; write=5.040 s, sync=3.148 s, total=8.291 s; archivos sincronizados=10, más largo=2.028 s, promedio=0.315 s; distancia=532900 kB, estimación=535294 kB; lsn=B/2A5C7060, lsn de redo=A/FE0DA878
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 8 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 1629 búfers (9.9%); 0 archivos WAL añadidos, 23 eliminados, 21 reciclados; write=5.270 s, sync=3.002 s, total=8.426 s; archivos sincronizados=3, más largo=1.825 s, promedio=1.001 s; distancia=736356 kB, estimación=736356 kB; lsn=B/54A86A80, lsn de redo=B/2AFF39A0
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 9 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 1041 búfers (6.4%); 0 archivos WAL añadidos, 20 eliminados, 23 reciclados; write=5.791 s, sync=3.031 s, total=8.989 s; archivos sincronizados=3, más largo=1.898 s, promedio=1.011 s; distancia=695433 kB, estimación=732264 kB; lsn=B/7DDD78E8, lsn de redo=B/55716160
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 9 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 1072 búfers (6.5%); 0 archivos WAL añadidos, 19 eliminados, 22 reciclados; write=6.238 s, sync=2.863 s, total=9.230 s; archivos sincronizados=3, más largo=1.806 s, promedio=0.955 s; distancia=675430 kB, estimación=726580 kB; lsn=B/A7932ED0, lsn de redo=B/7EAAF9B8
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 9 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 1079 búfers (6.6%); 0 archivos WAL añadidos, 19 eliminados, 23 reciclados; write=6.584 s, sync=2.519 s, total=9.259 s; archivos sincronizados=3, más largo=1.798 s, promedio=0.840 s; distancia=682334 kB, estimación=722156 kB; lsn=B/D03C0C68, lsn de redo=B/A85072E0
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 9 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 2218 búfers (13.5%); 0 archivos WAL añadidos, 18 eliminados, 22 reciclados; write=5.573 s, sync=2.585 s, total=8.318 s; archivos sincronizados=3, más largo=1.656 s, promedio=0.862 s; distancia=666379 kB, estimación=716578 kB; lsn=B/F9A88140, lsn de redo=B/D0FCA240
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 8 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 1142 búfers (7.0%); 0 archivos WAL añadidos, 17 eliminados, 25 reciclados; write=6.146 s, sync=2.414 s, total=8.690 s; archivos sincronizados=3, más largo=1.675 s, promedio=0.805 s; distancia=679194 kB, estimación=712839 kB; lsn=C/20BD6928, lsn de redo=B/FA710B80
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 9 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 1112 búfers (6.8%); 0 archivos WAL añadidos, 15 eliminados, 24 reciclados; write=5.158 s, sync=2.321 s, total=7.613 s; archivos sincronizados=3, más largo=1.730 s, promedio=0.774 s; distancia=639778 kB, estimación=705533 kB; lsn=C/48E2A5B0, lsn de redo=C/217D94A0
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 8 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 1179 búfers (7.2%); 0 archivos WAL añadidos, 17 eliminados, 23 reciclados; write=5.472 s, sync=2.722 s, total=8.325 s; archivos sincronizados=3, más largo=1.644 s, promedio=0.908 s; distancia=657770 kB, estimación=700757 kB; lsn=C/7151C0D0, lsn de redo=C/49A33EC8
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 8 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 1089 búfers (6.6%); 0 archivos WAL añadidos, 18 eliminados, 23 reciclados; write=5.580 s, sync=3.259 s, total=8.984 s; archivos sincronizados=3, más largo=2.238 s, promedio=1.087 s; distancia=662656 kB, estimación=696947 kB; lsn=C/9A627688, lsn de redo=C/72154018
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 9 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 1104 búfers (6.7%); 0 archivos WAL añadidos, 15 eliminados, 26 reciclados; write=5.814 s, sync=2.003 s, total=8.019 s; archivos sincronizados=3, más largo=1.826 s, promedio=0.668 s; distancia=672719 kB, estimación=694524 kB; lsn=C/C000B970, lsn de redo=C/9B247EC0
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 8 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 1869 búfers (11.4%); 0 archivos WAL añadidos, 14 eliminados, 23 reciclados; write=5.576 s, sync=2.833 s, total=8.539 s; archivos sincronizados=3, más largo=1.805 s, promedio=0.944 s; distancia=617113 kB, estimación=686783 kB; lsn=C/E881B318, lsn de redo=C/C0CEE5B0
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 9 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 1082 búfers (6.6%); 0 archivos WAL añadidos, 17 eliminados, 24 reciclados; write=6.345 s, sync=3.161 s, total=9.695 s; archivos sincronizados=3, más largo=2.374 s, promedio=1.054 s; distancia=661935 kB, estimación=684298 kB; lsn=D/10764538, lsn de redo=C/E935A350
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 9 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 1128 búfers (6.9%); 0 archivos WAL añadidos, 16 eliminados, 24 reciclados; write=5.686 s, sync=2.594 s, total=8.412 s; archivos sincronizados=3, más largo=1.883 s, promedio=0.865 s; distancia=656378 kB, estimación=681506 kB; lsn=D/38AE3870, lsn de redo=D/11458EC8
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 9 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 834 búfers (5.1%); 0 archivos WAL añadidos, 15 eliminados, 25 reciclados; write=5.160 s, sync=2.567 s, total=7.848 s; archivos sincronizados=3, más largo=1.720 s, promedio=0.856 s; distancia=658040 kB, estimación=679160 kB; lsn=D/5FD9B1B8, lsn de redo=D/396F7170
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 8 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 1050 búfers (6.4%); 0 archivos WAL añadidos, 15 eliminados, 24 reciclados; write=6.018 s, sync=2.755 s, total=8.912 s; archivos sincronizados=3, más largo=1.633 s, promedio=0.919 s; distancia=641222 kB, estimación=675366 kB; lsn=D/878CB0D8, lsn de redo=D/60928AD8
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 8 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 1069 búfers (6.5%); 0 archivos WAL añadidos, 16 eliminados, 24 reciclados; write=6.124 s, sync=2.317 s, total=8.592 s; archivos sincronizados=3, más largo=1.835 s, promedio=0.773 s; distancia=650958 kB, estimación=672925 kB; lsn=D/AF6765B8, lsn de redo=D/884DC480
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 9 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 2030 búfers (12.4%); 0 archivos WAL añadidos, 17 eliminados, 23 reciclados; write=5.144 s, sync=2.785 s, total=8.061 s; archivos sincronizados=3, más largo=1.684 s, promedio=0.929 s; distancia=653935 kB, estimación=671026 kB; lsn=D/D80C1868, lsn de redo=D/B03783B0
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 8 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 1096 búfers (6.7%); 0 archivos WAL añadidos, 17 eliminados, 23 reciclados; write=5.467 s, sync=3.140 s, total=8.739 s; archivos sincronizados=3, más largo=2.228 s, promedio=1.047 s; distancia=664793 kB, estimación=670403 kB; lsn=E/435868, lsn de redo=D/D8CAE858
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 9 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 1136 búfers (6.9%); 0 archivos WAL añadidos, 15 eliminados, 26 reciclados; write=7.200 s, sync=2.605 s, total=10.027 s; archivos sincronizados=3, más largo=2.391 s, promedio=0.869 s; distancia=659053 kB, estimación=669268 kB; lsn=E/26011428, lsn de redo=E/1049E50
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 10 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 3084 búfers (18.8%); 0 archivos WAL añadidos, 12 eliminados, 25 reciclados; write=7.002 s, sync=2.693 s, total=9.843 s; archivos sincronizados=3, más largo=1.745 s, promedio=0.898 s; distancia=619117 kB, estimación=664253 kB; lsn=E/4CC589E0, lsn de redo=E/26CE5410
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 10 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 1159 búfers (7.1%); 0 archivos WAL añadidos, 15 eliminados, 24 reciclados; write=6.110 s, sync=2.900 s, total=9.205 s; archivos sincronizados=2, más largo=1.802 s, promedio=1.450 s; distancia=633317 kB, estimación=661159 kB; lsn=E/747920E8, lsn de redo=E/4D75E960
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 9 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 1135 búfers (6.9%); 0 archivos WAL añadidos, 13 eliminados, 27 reciclados; write=6.252 s, sync=2.394 s, total=8.806 s; archivos sincronizados=3, más largo=2.337 s, promedio=0.798 s; distancia=652797 kB, estimación=660323 kB; lsn=E/992C3FA8, lsn de redo=E/754DE088
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 9 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 1192 búfers (7.3%); 0 archivos WAL añadidos, 13 eliminados, 23 reciclados; write=6.565 s, sync=3.505 s, total=10.221 s; archivos sincronizados=2, más largo=2.602 s, promedio=1.753 s; distancia=599572 kB, estimación=654248 kB; lsn=E/C1FC8FA0, lsn de redo=E/99E631B0
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 10 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 1156 búfers (7.1%); 0 archivos WAL añadidos, 17 eliminados, 24 reciclados; write=7.087 s, sync=2.581 s, total=9.927 s; archivos sincronizados=2, más largo=1.323 s, promedio=1.291 s; distancia=669183 kB, estimación=669183 kB; lsn=E/E91C13F0, lsn de redo=E/C2BE2F08
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 10 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 401 búfers (2.4%); 0 archivos WAL añadidos, 13 eliminados, 26 reciclados; write=5.378 s, sync=2.657 s, total=8.200 s; archivos sincronizados=2, más largo=1.910 s, promedio=1.329 s; distancia=641933 kB, estimación=666458 kB; lsn=F/E552A30, lsn de redo=E/E9EC6698
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 8 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 1133 búfers (6.9%); 0 archivos WAL añadidos, 14 eliminados, 24 reciclados; write=5.350 s, sync=2.896 s, total=8.380 s; archivos sincronizados=2, más largo=1.788 s, promedio=1.448 s; distancia=609125 kB, estimación=660725 kB; lsn=F/36AB09D8, lsn de redo=F/F19FC90
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 8 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 1108 búfers (6.8%); 0 archivos WAL añadidos, 17 eliminados, 23 reciclados; write=5.574 s, sync=2.631 s, total=8.338 s; archivos sincronizados=2, más largo=1.774 s, promedio=1.316 s; distancia=660360 kB, estimación=660688 kB; lsn=F/5FC4AD50, lsn de redo=F/37681C98
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 9 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 1848 búfers (11.3%); 0 archivos WAL añadidos, 18 eliminados, 23 reciclados; write=5.476 s, sync=2.913 s, total=8.533 s; archivos sincronizados=2, más largo=1.873 s, promedio=1.457 s; distancia=673461 kB, estimación=673461 kB; lsn=F/8877AB98, lsn de redo=F/6082F098
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 8 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 1098 búfers (6.7%); 0 archivos WAL añadidos, 15 eliminados, 26 reciclados; write=5.368 s, sync=2.780 s, total=8.306 s; archivos sincronizados=2, más largo=1.422 s, promedio=1.390 s; distancia=667580 kB, estimación=672872 kB; lsn=F/AEFAA6E0, lsn de redo=F/8941E3D8
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 9 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 1378 búfers (8.4%); 0 archivos WAL añadidos, 14 eliminados, 24 reciclados; write=6.129 s, sync=2.562 s, total=8.987 s; archivos sincronizados=2, más largo=1.895 s, promedio=1.281 s; distancia=631592 kB, estimación=668744 kB; lsn=F/D61F1B28, lsn de redo=F/AFCE85A0
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 9 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 3488 búfers (21.3%); 0 archivos WAL añadidos, 16 eliminados, 23 reciclados; write=6.117 s, sync=3.111 s, total=9.368 s; archivos sincronizados=2, más largo=2.094 s, promedio=1.556 s; distancia=640479 kB, estimación=665918 kB; lsn=F/FED4DC78, lsn de redo=F/D6E60518
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 9 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 1111 búfers (6.8%); 0 archivos WAL añadidos, 13 eliminados, 28 reciclados; write=5.371 s, sync=2.484 s, total=7.997 s; archivos sincronizados=2, más largo=1.244 s, promedio=1.242 s; distancia=667059 kB, estimación=667059 kB; lsn=10/22163140, lsn de redo=F/FF9CD308
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 8 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 490 búfers (3.0%); 0 archivos WAL añadidos, 14 eliminados, 21 reciclados; write=5.347 s, sync=2.857 s, total=8.337 s; archivos sincronizados=2, más largo=1.955 s, promedio=1.429 s; distancia=577184 kB, estimación=658072 kB; lsn=10/4C403618, lsn de redo=10/22D756C8
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 8 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 1751 búfers (10.7%); 0 archivos WAL añadidos, 19 eliminados, 23 reciclados; write=5.808 s, sync=2.791 s, total=8.778 s; archivos sincronizados=2, más largo=1.836 s, promedio=1.396 s; distancia=689549 kB, estimación=689549 kB; lsn=10/7409BAC0, lsn de redo=10/4CED8AF8
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 9 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 1175 búfers (7.2%); 0 archivos WAL añadidos, 16 eliminados, 24 reciclados; write=6.246 s, sync=2.282 s, total=8.678 s; archivos sincronizados=2, más largo=1.733 s, promedio=1.141 s; distancia=654373 kB, estimación=686031 kB; lsn=10/9B40FF90, lsn de redo=10/74DE22E0
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 9 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 648 búfers (4.0%); 0 archivos WAL añadidos, 17 eliminados, 23 reciclados; write=5.469 s, sync=2.955 s, total=8.559 s; archivos sincronizados=2, más largo=2.128 s, promedio=1.478 s; distancia=641577 kB, estimación=681586 kB; lsn=10/C42C6750, lsn de redo=10/9C06C8F0
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 8 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] ::1(56445)ERROR:  VACUUM no puede ser ejecutado dentro de un bloque de transacción
+[09066309P 08134385K] ::1(56445)SENTENCIA:  VACUUM;
+[09066309P 08134385K] ::1(57030)LOG:  sentencia: DELETE FROM productos
+	WHERE producto_id IN (
+	    SELECT producto_id 
+	    FROM productos 
+	    ORDER BY random()
+	    LIMIT 4000000
+	);
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 1774 búfers (10.8%); 0 archivos WAL añadidos, 3 eliminados, 37 reciclados; write=229.849 s, sync=0.589 s, total=230.572 s; archivos sincronizados=2, más largo=0.569 s, promedio=0.295 s; distancia=669266 kB, estimación=680354 kB; lsn=10/DED745C0, lsn de redo=10/C4E013E8
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 45 búfers (0.3%); 0 archivos WAL añadidos, 11 eliminados, 22 reciclados; write=9.744 s, sync=2.865 s, total=12.718 s; archivos sincronizados=3, más largo=1.978 s, promedio=0.955 s; distancia=528225 kB, estimación=665141 kB; lsn=11/E496780, lsn de redo=10/E51D9868
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 13 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 3700 búfers (22.6%); 0 archivos WAL añadidos, 19 eliminados, 22 reciclados; write=5.888 s, sync=3.422 s, total=9.488 s; archivos sincronizados=2, más largo=2.102 s, promedio=1.711 s; distancia=684831 kB, estimación=684831 kB; lsn=11/37CCC8E8, lsn de redo=11/EEA1468
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 10 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 1210 búfers (7.4%); 0 archivos WAL añadidos, 21 eliminados, 21 reciclados; write=6.003 s, sync=3.421 s, total=9.582 s; archivos sincronizados=2, más largo=2.370 s, promedio=1.711 s; distancia=682139 kB, estimación=684561 kB; lsn=11/6254B3C8, lsn de redo=11/388C8250
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 9 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 1077 búfers (6.6%); 0 archivos WAL añadidos, 19 eliminados, 24 reciclados; write=6.329 s, sync=2.287 s, total=8.780 s; archivos sincronizados=2, más largo=1.805 s, promedio=1.144 s; distancia=697410 kB, estimación=697410 kB; lsn=11/8A669190, lsn de redo=11/631D8BE0
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 9 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 486 búfers (3.0%); 0 archivos WAL añadidos, 17 eliminados, 23 reciclados; write=6.781 s, sync=2.726 s, total=9.655 s; archivos sincronizados=2, más largo=1.925 s, promedio=1.363 s; distancia=656581 kB, estimación=693327 kB; lsn=11/B3D42148, lsn de redo=11/8B30A328
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 10 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 1908 búfers (11.6%); 0 archivos WAL añadidos, 18 eliminados, 23 reciclados; write=5.784 s, sync=2.739 s, total=8.667 s; archivos sincronizados=2, más largo=1.770 s, promedio=1.370 s; distancia=676892 kB, estimación=691683 kB; lsn=11/DC28B0C0, lsn de redo=11/B4811370
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 8 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 1080 búfers (6.6%); 0 archivos WAL añadidos, 17 eliminados, 23 reciclados; write=5.809 s, sync=3.606 s, total=9.572 s; archivos sincronizados=2, más largo=2.420 s, promedio=1.803 s; distancia=661906 kB, estimación=688706 kB; lsn=12/4423E98, lsn de redo=11/DCE75B78
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 10 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 1139 búfers (7.0%); 0 archivos WAL añadidos, 17 eliminados, 24 reciclados; write=6.351 s, sync=3.151 s, total=9.716 s; archivos sincronizados=2, más largo=2.151 s, promedio=1.576 s; distancia=657110 kB, estimación=685546 kB; lsn=12/2C4175F0, lsn de redo=12/502B468
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 10 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 3864 búfers (23.6%); 0 archivos WAL añadidos, 13 eliminados, 27 reciclados; write=7.647 s, sync=2.564 s, total=10.547 s; archivos sincronizados=2, más largo=1.406 s, promedio=1.282 s; distancia=655492 kB, estimación=682541 kB; lsn=12/51FDEC38, lsn de redo=12/2D04C5F8
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 10 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 1212 búfers (7.4%); 0 archivos WAL añadidos, 8 eliminados, 29 reciclados; write=6.891 s, sync=1.643 s, total=8.940 s; archivos sincronizados=2, más largo=1.634 s, promedio=0.822 s; distancia=620770 kB, estimación=676364 kB; lsn=12/744E0380, lsn de redo=12/52E85090
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 9 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 1811 búfers (11.1%); 0 archivos WAL añadidos, 4 eliminados, 31 reciclados; write=7.567 s, sync=0.922 s, total=8.696 s; archivos sincronizados=2, más largo=0.895 s, promedio=0.461 s; distancia=563829 kB, estimación=665110 kB; lsn=12/9523B730, lsn de redo=12/75522638
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 9 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 864 búfers (5.3%); 0 archivos WAL añadidos, 6 eliminados, 27 reciclados; write=10.159 s, sync=2.153 s, total=12.441 s; archivos sincronizados=2, más largo=1.237 s, promedio=1.077 s; distancia=537272 kB, estimación=652326 kB; lsn=12/BAC94940, lsn de redo=12/961D06B8
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 12 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 1085 búfers (6.6%); 0 archivos WAL añadidos, 16 eliminados, 21 reciclados; write=5.877 s, sync=3.511 s, total=9.555 s; archivos sincronizados=2, más largo=2.433 s, promedio=1.756 s; distancia=611728 kB, estimación=648267 kB; lsn=12/E51395D0, lsn de redo=12/BB734A60
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 10 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 1133 búfers (6.9%); 0 archivos WAL añadidos, 20 eliminados, 22 reciclados; write=5.682 s, sync=2.917 s, total=8.763 s; archivos sincronizados=2, más largo=1.780 s, promedio=1.459 s; distancia=694423 kB, estimación=694423 kB; lsn=13/E4949F8, lsn de redo=12/E5D5A980
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 9 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 1153 búfers (7.0%); 0 archivos WAL añadidos, 19 eliminados, 23 reciclados; write=5.688 s, sync=3.023 s, total=8.874 s; archivos sincronizados=2, más largo=2.222 s, promedio=1.512 s; distancia=676004 kB, estimación=692581 kB; lsn=13/371E0E10, lsn de redo=13/F183A78
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 9 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 3304 búfers (20.2%); 0 archivos WAL añadidos, 17 eliminados, 23 reciclados; write=5.584 s, sync=2.408 s, total=8.123 s; archivos sincronizados=2, más largo=1.465 s, promedio=1.204 s; distancia=669305 kB, estimación=690254 kB; lsn=13/5F4E2210, lsn de redo=13/37F21FB8
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 8 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 1157 búfers (7.1%); 0 archivos WAL añadidos, 17 eliminados, 24 reciclados; write=5.678 s, sync=3.371 s, total=9.237 s; archivos sincronizados=2, más largo=2.380 s, promedio=1.685 s; distancia=657279 kB, estimación=686956 kB; lsn=13/875A3880, lsn de redo=13/60101E28
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 9 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 1220 búfers (7.4%); 0 archivos WAL añadidos, 16 eliminados, 24 reciclados; write=6.974 s, sync=2.530 s, total=9.648 s; archivos sincronizados=2, más largo=2.064 s, promedio=1.265 s; distancia=655908 kB, estimación=683851 kB; lsn=13/AF8760A8, lsn de redo=13/8818B1A0
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 10 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 2746 búfers (16.8%); 0 archivos WAL añadidos, 17 eliminados, 23 reciclados; write=5.135 s, sync=2.871 s, total=8.152 s; archivos sincronizados=2, más largo=1.851 s, promedio=1.436 s; distancia=659009 kB, estimación=681367 kB; lsn=13/D844CF98, lsn de redo=13/B051B5D8
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 8 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 1105 búfers (6.7%); 0 archivos WAL añadidos, 17 eliminados, 24 reciclados; write=5.374 s, sync=2.679 s, total=8.215 s; archivos sincronizados=2, más largo=1.640 s, promedio=1.339 s; distancia=666918 kB, estimación=679922 kB; lsn=14/CD328, lsn de redo=13/D90650E0
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 8 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 1155 búfers (7.0%); 0 archivos WAL añadidos, 17 eliminados, 23 reciclados; write=5.045 s, sync=2.665 s, total=7.845 s; archivos sincronizados=2, más largo=1.929 s, promedio=1.333 s; distancia=655124 kB, estimación=677442 kB; lsn=14/295E2BB8, lsn de redo=14/102A1D0
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 8 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 882 búfers (5.4%); 0 archivos WAL añadidos, 18 eliminados, 23 reciclados; write=5.265 s, sync=2.755 s, total=8.163 s; archivos sincronizados=2, más largo=1.930 s, promedio=1.378 s; distancia=673926 kB, estimación=677091 kB; lsn=14/525D1708, lsn de redo=14/2A24BCC8
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 8 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 1152 búfers (7.0%); 0 archivos WAL añadidos, 17 eliminados, 24 reciclados; write=5.386 s, sync=2.958 s, total=8.495 s; archivos sincronizados=2, más largo=2.014 s, promedio=1.479 s; distancia=672457 kB, estimación=676627 kB; lsn=14/7AF847C8, lsn de redo=14/532FE200
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 8 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 1109 búfers (6.8%); 0 archivos WAL añadidos, 16 eliminados, 24 reciclados; write=6.472 s, sync=2.650 s, total=9.276 s; archivos sincronizados=2, más largo=1.444 s, promedio=1.325 s; distancia=665321 kB, estimación=675497 kB; lsn=14/A22D21A0, lsn de redo=14/7BCB8648
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 10 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 656 búfers (4.0%); 0 archivos WAL añadidos, 12 eliminados, 27 reciclados; write=6.581 s, sync=1.985 s, total=8.737 s; archivos sincronizados=2, más largo=1.975 s, promedio=0.993 s; distancia=640971 kB, estimación=672044 kB; lsn=14/C645BEA0, lsn de redo=14/A2EAB280
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 8 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 1224 búfers (7.5%); 0 archivos WAL añadidos, 13 eliminados, 24 reciclados; write=5.953 s, sync=2.937 s, total=9.028 s; archivos sincronizados=2, más largo=1.775 s, promedio=1.469 s; distancia=591918 kB, estimación=664031 kB; lsn=14/EEA725D0, lsn de redo=14/C70B6C10
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 9 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 1150 búfers (7.0%); 0 archivos WAL añadidos, 18 eliminados, 22 reciclados; write=5.267 s, sync=2.581 s, total=7.983 s; archivos sincronizados=2, más largo=1.826 s, promedio=1.291 s; distancia=660348 kB, estimación=663663 kB; lsn=15/185F4260, lsn de redo=14/EF595DE0
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 8 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 970 búfers (5.9%); 0 archivos WAL añadidos, 20 eliminados, 22 reciclados; write=5.391 s, sync=3.069 s, total=8.613 s; archivos sincronizados=2, más largo=2.163 s, promedio=1.535 s; distancia=684983 kB, estimación=684983 kB; lsn=15/42295738, lsn de redo=15/19283A08
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 9 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 989 búfers (6.0%); 0 archivos WAL añadidos, 18 eliminados, 23 reciclados; write=5.604 s, sync=3.055 s, total=8.807 s; archivos sincronizados=2, más largo=2.066 s, promedio=1.528 s; distancia=684488 kB, estimación=684933 kB; lsn=15/6A4DBC10, lsn de redo=15/42EF5A10
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 9 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 1119 búfers (6.8%); 0 archivos WAL añadidos, 16 eliminados, 25 reciclados; write=5.507 s, sync=2.247 s, total=7.894 s; archivos sincronizados=2, más largo=1.740 s, promedio=1.124 s; distancia=658071 kB, estimación=682247 kB; lsn=15/91F397E0, lsn de redo=15/6B19B8B0
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 8 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 779 búfers (4.8%); 0 archivos WAL añadidos, 17 eliminados, 22 reciclados; write=5.163 s, sync=2.618 s, total=7.958 s; archivos sincronizados=2, más largo=1.710 s, promedio=1.309 s; distancia=649289 kB, estimación=678951 kB; lsn=15/BB0E3048, lsn de redo=15/92BAE0A0
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 8 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 3689 búfers (22.5%); 0 archivos WAL añadidos, 18 eliminados, 23 reciclados; write=5.380 s, sync=2.706 s, total=8.228 s; archivos sincronizados=2, más largo=1.677 s, promedio=1.353 s; distancia=674096 kB, estimación=678466 kB; lsn=15/E3503538, lsn de redo=15/BBDFA208
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 8 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 1103 búfers (6.7%); 0 archivos WAL añadidos, 16 eliminados, 25 reciclados; write=5.150 s, sync=2.724 s, total=8.018 s; archivos sincronizados=2, más largo=1.844 s, promedio=1.362 s; distancia=659513 kB, estimación=676570 kB; lsn=16/AF82A18, lsn de redo=15/E42088D0
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 8 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 1119 búfers (6.8%); 0 archivos WAL añadidos, 15 eliminados, 24 reciclados; write=6.567 s, sync=2.994 s, total=9.755 s; archivos sincronizados=2, más largo=2.167 s, promedio=1.497 s; distancia=649002 kB, estimación=673813 kB; lsn=16/329C8360, lsn de redo=16/BBD3228
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 10 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 2075 búfers (12.7%); 0 archivos WAL añadidos, 15 eliminados, 25 reciclados; write=6.810 s, sync=3.104 s, total=10.060 s; archivos sincronizados=2, más largo=2.050 s, promedio=1.552 s; distancia=648938 kB, estimación=671326 kB; lsn=16/59F7FC08, lsn de redo=16/3358DAA8
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 10 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 1081 búfers (6.6%); 0 archivos WAL añadidos, 16 eliminados, 23 reciclados; write=5.453 s, sync=2.521 s, total=8.157 s; archivos sincronizados=2, más largo=1.870 s, promedio=1.261 s; distancia=645207 kB, estimación=668714 kB; lsn=16/8221F360, lsn de redo=16/5ABA3788
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 8 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 883 búfers (5.4%); 0 archivos WAL añadidos, 17 eliminados, 23 reciclados; write=5.734 s, sync=2.858 s, total=8.742 s; archivos sincronizados=2, más largo=1.838 s, promedio=1.429 s; distancia=658377 kB, estimación=667680 kB; lsn=16/AADA1790, lsn de redo=16/82E95F58
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 9 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 3921 búfers (23.9%); 0 archivos WAL añadidos, 18 eliminados, 23 reciclados; write=5.158 s, sync=2.793 s, total=8.092 s; archivos sincronizados=2, más largo=1.831 s, promedio=1.397 s; distancia=668299 kB, estimación=668299 kB; lsn=16/D3D80230, lsn de redo=16/ABB38CB0
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 8 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] ::1(57030)LOG:  sentencia: INSERT INTO productos VALUES (25000001, 'prod_25000001', 123, 456);
+[09066309P 08134385K] ::1(57030)LOG:  sentencia: DELETE FROM productos WHERE producto_id=25000001;
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 1716 búfers (10.5%); 0 archivos WAL añadidos, 11 eliminados, 30 reciclados; write=204.272 s, sync=0.243 s, total=204.642 s; archivos sincronizados=2, más largo=0.216 s, promedio=0.122 s; distancia=669820 kB, estimación=669820 kB; lsn=16/F5041FB8, lsn de redo=16/D4957D50
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 9060 búfers (55.3%); 0 archivos WAL añadidos, 7 eliminados, 27 reciclados; write=2.095 s, sync=0.741 s, total=2.941 s; archivos sincronizados=6, más largo=0.481 s, promedio=0.124 s; distancia=559268 kB, estimación=658765 kB; lsn=17/1AE38528, lsn de redo=16/F6B81008
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 3 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 1639 búfers (10.0%); 0 archivos WAL añadidos, 10 eliminados, 28 reciclados; write=2.311 s, sync=0.836 s, total=3.264 s; archivos sincronizados=3, más largo=0.703 s, promedio=0.279 s; distancia=617102 kB, estimación=654598 kB; lsn=17/3F828E90, lsn de redo=17/1C624A88
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 4 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 14541 búfers (88.8%); 0 archivos WAL añadidos, 14 eliminados, 22 reciclados; write=2.749 s, sync=1.025 s, total=3.899 s; archivos sincronizados=3, más largo=0.635 s, promedio=0.342 s; distancia=587885 kB, estimación=647927 kB; lsn=17/69036018, lsn de redo=17/4043FF10
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 4 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 24 búfers (0.1%); 0 archivos WAL añadidos, 13 eliminados, 30 reciclados; write=1.747 s, sync=0.323 s, total=2.201 s; archivos sincronizados=5, más largo=0.274 s, promedio=0.065 s; distancia=700519 kB, estimación=700519 kB; lsn=17/8C6033F8, lsn de redo=17/6B059EC0
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 2 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] ::1(57030)LOG:  sentencia: INSERT INTO productos VALUES (25000001, 'prod_25000001', 123, 456);
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 1381 búfers (8.4%); 0 archivos WAL añadidos, 0 eliminados, 35 reciclados; write=37.013 s, sync=0.284 s, total=37.407 s; archivos sincronizados=24, más largo=0.265 s, promedio=0.012 s; distancia=585945 kB, estimación=689062 kB; lsn=17/A6BB71F8, lsn de redo=17/8EC90640
+[09066309P 08134385K] ::1(57030)ERROR:  error de sintaxis en o cerca de «FULL» en carácter 1
+[09066309P 08134385K] ::1(57030)SENTENCIA:  FULL VACUUM;
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 6910 búfers (42.2%); 0 archivos WAL añadidos, 2 eliminados, 31 reciclados; write=6.378 s, sync=0.550 s, total=7.060 s; archivos sincronizados=58, más largo=0.261 s, promedio=0.010 s; distancia=531899 kB, estimación=673346 kB; lsn=17/CF1080A0, lsn de redo=17/AF3FF3A8
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 7 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 0 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=0.001 s, sync=0.001 s, total=0.107 s; archivos sincronizados=0, más largo=0.000 s, promedio=0.000 s; distancia=538142 kB, estimación=659825 kB; lsn=17/D0289408, lsn de redo=17/D0186F80
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 7 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 0 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=0.001 s, sync=0.001 s, total=0.107 s; archivos sincronizados=0, más largo=0.000 s, promedio=0.000 s; distancia=543203 kB, estimación=648163 kB; lsn=17/F143E5D8, lsn de redo=17/F13FFC98
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 11 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 5 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=0.552 s, sync=0.271 s, total=0.930 s; archivos sincronizados=5, más largo=0.270 s, promedio=0.055 s; distancia=540664 kB, estimación=637413 kB; lsn=18/156F31E8, lsn de redo=18/123FE088
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 7 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 44 búfers (0.3%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=4.718 s, sync=0.395 s, total=5.217 s; archivos sincronizados=33, más largo=0.378 s, promedio=0.012 s; distancia=540672 kB, estimación=627739 kB; lsn=18/4AF9F6F8, lsn de redo=18/333FE218
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 7 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 0 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=0.001 s, sync=0.001 s, total=0.110 s; archivos sincronizados=0, más largo=0.000 s, promedio=0.000 s; distancia=540677 kB, estimación=619033 kB; lsn=18/544460D0, lsn de redo=18/543FF670
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 7 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 0 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=0.001 s, sync=0.001 s, total=0.120 s; archivos sincronizados=0, más largo=0.000 s, promedio=0.000 s; distancia=540669 kB, estimación=611196 kB; lsn=18/75447598, lsn de redo=18/753FEB08
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 16 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 11 búfers (0.1%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=1.199 s, sync=0.330 s, total=1.654 s; archivos sincronizados=7, más largo=0.326 s, promedio=0.048 s; distancia=539258 kB, estimación=604003 kB; lsn=18/9B96D7F0, lsn de redo=18/9629D310
+[09066309P 08134385K] ::1(57030)LOG:  sentencia: INSERT INTO productos VALUES (25000002, 'prod_25000002', 123, 456);
+[09066309P 08134385K] LOG:  empezando checkpoint: time
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 225 búfers (1.4%); 0 archivos WAL añadidos, 0 eliminados, 5 reciclados; write=24.603 s, sync=0.117 s, total=24.805 s; archivos sincronizados=279, más largo=0.002 s, promedio=0.001 s; distancia=94538 kB, estimación=553056 kB; lsn=18/9BEEFE68, lsn de redo=18/9BEEFE30
+[09066309P 08134385K] ::1(57030)LOG:  sentencia: DELETE FROM productos WHERE producto_id=25000002;
+[09066309P 08134385K] LOG:  empezando checkpoint: time
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 2 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.105 s, sync=0.003 s, total=0.118 s; archivos sincronizados=2, más largo=0.002 s, promedio=0.002 s; distancia=0 kB, estimación=497751 kB; lsn=18/9BEF00A8, lsn de redo=18/9BEF0070

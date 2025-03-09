@@ -1,0 +1,46 @@
+[09066309P 08134385K] LOG:  el sistema de bases de datos fue interrumpido; última vez en funcionamiento en 2025-02-04 13:55:14 CET
+[09066309P 08134385K] LOG:  el sistema de bases de datos no fue apagado apropiadamente; se está efectuando la recuperación automática
+[09066309P 08134385K] LOG:  redo comienza en 1/4E0AB8D0
+[09066309P 08134385K] LOG:  pageaddr 1/17BE0000 inesperado en segmento WAL 000000010000000100000058, LSN 1/58BE0000, posición 12451840
+[09066309P 08134385K] LOG:  redo listo en 1/58BDFF88 utilización del sistema: CPU: usuario: 1.78 s, sistema: 2.26 s, transcurrido: 7.88 s
+[09066309P 08134385K] LOG:  empezando checkpoint: end-of-recovery immediate wait
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 16315 búfers (99.6%); 0 archivos WAL añadidos, 10 eliminados, 0 reciclados; write=0.127 s, sync=0.589 s, total=0.741 s; archivos sincronizados=8, más largo=0.477 s, promedio=0.074 s; distancia=175313 kB, estimación=175313 kB; lsn=1/58BE0048, lsn de redo=1/58BE0048
+[09066309P 08134385K] ::1(49812)LOG:  sentencia: DROP DATABASE IF EXISTS PL1;
+[09066309P 08134385K] LOG:  empezando checkpoint: immediate force wait
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 1 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.004 s, sync=0.001 s, total=0.025 s; archivos sincronizados=1, más largo=0.001 s, promedio=0.001 s; distancia=2 kB, estimación=157782 kB; lsn=1/58BE0AF0, lsn de redo=1/58BE0AB8
+[09066309P 08134385K] ::1(49812)LOG:  sentencia: CREATE DATABASE PL1;
+[09066309P 08134385K] ::1(49820)LOG:  sentencia: CREATE TABLE productos(
+	    producto_id INTEGER PRIMARY KEY,
+	    nombre CHAR(20),
+	    stock INTEGER,
+	    precio INTEGER
+	);
+[09066309P 08134385K] ::1(49820)LOG:  sentencia: COPY  productos FROM STDIN DELIMITER ',' CSV;
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 14 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 7893 búfers (48.2%); 0 archivos WAL añadidos, 1 eliminados, 32 reciclados; write=10.278 s, sync=0.635 s, total=11.093 s; archivos sincronizados=302, más largo=0.353 s, promedio=0.003 s; distancia=529148 kB, estimación=529148 kB; lsn=1/98330710, lsn de redo=1/7909FCD8
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 12 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 11943 búfers (72.9%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=10.490 s, sync=0.241 s, total=10.851 s; archivos sincronizados=2, más largo=0.142 s, promedio=0.121 s; distancia=540310 kB, estimación=540310 kB; lsn=1/B8EA4B80, lsn de redo=1/9A045750
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 11 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 12284 búfers (75.0%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=9.652 s, sync=0.276 s, total=10.037 s; archivos sincronizados=3, más largo=0.157 s, promedio=0.092 s; distancia=542020 kB, estimación=542020 kB; lsn=1/D9C0BA68, lsn de redo=1/BB1967C8
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 11 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 12517 búfers (76.4%); 0 archivos WAL añadidos, 1 eliminados, 32 reciclados; write=9.356 s, sync=0.265 s, total=9.773 s; archivos sincronizados=2, más largo=0.146 s, promedio=0.133 s; distancia=542023 kB, estimación=542023 kB; lsn=1/FB0DFC80, lsn de redo=1/DC2E8418
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 10 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 10507 búfers (64.1%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=269.197 s, sync=0.061 s, total=269.352 s; archivos sincronizados=5, más largo=0.054 s, promedio=0.013 s; distancia=539457 kB, estimación=541766 kB; lsn=1/FEE459D8, lsn de redo=1/FD1B88F8
+[09066309P 08134385K] LOG:  empezando checkpoint: time
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 1543 búfers (9.4%); 0 archivos WAL añadidos, 0 eliminados, 1 reciclados; write=173.348 s, sync=0.007 s, total=173.405 s; archivos sincronizados=9, más largo=0.002 s, promedio=0.001 s; distancia=30341 kB, estimación=490623 kB; lsn=1/FF3CF238, lsn de redo=1/FEF59D38
+[09066309P 08134385K] LOG:  empezando checkpoint: time
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 1099 búfers (6.7%); 0 archivos WAL añadidos, 1 eliminados, 0 reciclados; write=121.008 s, sync=0.006 s, total=121.054 s; archivos sincronizados=11, más largo=0.001 s, promedio=0.001 s; distancia=4583 kB, estimación=442019 kB; lsn=1/FF3D3B30, lsn de redo=1/FF3D3AF8
+[09066309P 08134385K] ::1(1677)ERROR:  no existe la relación «pg_controldata» en carácter 15
+[09066309P 08134385K] ::1(1677)SENTENCIA:  SELECT * FROM pg_controldata;
+[09066309P 08134385K] ::1(50999)LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	

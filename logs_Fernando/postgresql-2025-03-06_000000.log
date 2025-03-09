@@ -1,0 +1,33 @@
+[09066309P 08134385K] ::1(25887)ERROR:  no existe la relación «productos3» en carácter 22
+[09066309P 08134385K] ::1(25887)SENTENCIA:  SELECT COUNT(*) FROM productos3 WHERE precio = 3000;
+[09066309P 08134385K] ::1(25923)LOG:  sentencia: CREATE TABLE productos3(
+	    producto_id INTEGER,
+	    nombre CHAR(20),
+	    stock INTEGER,
+	    precio INTEGER
+	) PARTITION BY RANGE(precio);
+[09066309P 08134385K] ::1(25923)LOG:  sentencia: CREATE TABLE productos3_0 PARTITION OF productos3 FOR VALUES FROM (1) TO (501);
+[09066309P 08134385K] ::1(25923)LOG:  sentencia: CREATE TABLE productos3_500 PARTITION OF productos3 FOR VALUES FROM (501) TO (1001);
+[09066309P 08134385K] ::1(25923)LOG:  sentencia: CREATE TABLE productos3_1000 PARTITION OF productos3 FOR VALUES FROM (1001) TO (1501);
+[09066309P 08134385K] ::1(25923)LOG:  sentencia: CREATE TABLE productos3_1500 PARTITION OF productos3 FOR VALUES FROM (1501) TO (2001);
+[09066309P 08134385K] ::1(25923)LOG:  sentencia: CREATE TABLE productos3_2000 PARTITION OF productos3 FOR VALUES FROM (2001) TO (2501);
+[09066309P 08134385K] ::1(25923)LOG:  sentencia: CREATE TABLE productos3_2500 PARTITION OF productos3 FOR VALUES FROM (2501) TO (3001);
+[09066309P 08134385K] ::1(25923)LOG:  sentencia: CREATE TABLE productos3_3000 PARTITION OF productos3 FOR VALUES FROM (3001) TO (3501);
+[09066309P 08134385K] ::1(25923)LOG:  sentencia: CREATE TABLE productos3_3500 PARTITION OF productos3 FOR VALUES FROM (3501) TO (4001);
+[09066309P 08134385K] ::1(25923)LOG:  sentencia: CREATE TABLE productos3_4000 PARTITION OF productos3 FOR VALUES FROM (4001) TO (4501);
+[09066309P 08134385K] ::1(25923)LOG:  sentencia: CREATE TABLE productos3_4500 PARTITION OF productos3 FOR VALUES FROM (4501) TO (5001);
+[09066309P 08134385K] ::1(25923)LOG:  sentencia: INSERT INTO productos3(producto_id, nombre, stock, precio) SELECT * FROM productos;
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 3018 búfers (18.4%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=8.740 s, sync=0.339 s, total=9.188 s; archivos sincronizados=48, más largo=0.047 s, promedio=0.008 s; distancia=529911 kB, estimación=529911 kB; lsn=23/4DF5018, lsn de redo=22/E6401F28
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 10 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 3019 búfers (18.4%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=8.195 s, sync=0.254 s, total=8.554 s; archivos sincronizados=20, más largo=0.033 s, promedio=0.013 s; distancia=539730 kB, estimación=539730 kB; lsn=23/25C2CD48, lsn de redo=23/7316A58
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 9 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 3051 búfers (18.6%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=8.742 s, sync=0.237 s, total=9.090 s; archivos sincronizados=20, más largo=0.031 s, promedio=0.012 s; distancia=540715 kB, estimación=540715 kB; lsn=23/46BD2C20, lsn de redo=23/28321A20
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 9 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 3061 búfers (18.7%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=269.200 s, sync=0.012 s, total=269.301 s; archivos sincronizados=21, más largo=0.002 s, promedio=0.001 s; distancia=541564 kB, estimación=541564 kB; lsn=23/557B8E50, lsn de redo=23/49400B70

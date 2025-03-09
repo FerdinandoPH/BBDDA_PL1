@@ -1,0 +1,75 @@
+[09066309P 08134385K] LOG:  iniciando PostgreSQL 16.4, compiled by Visual C++ build 1940, 64-bit
+[09066309P 08134385K] LOG:  escuchando en la dirección IPv6 «::», port 5432
+[09066309P 08134385K] LOG:  escuchando en la dirección IPv4 «0.0.0.0», port 5432
+[09066309P 08134385K] LOG:  el sistema de bases de datos fue interrumpido; última vez en funcionamiento en 2025-02-04 13:06:22 CET
+[09066309P 08134385K] LOG:  el sistema de bases de datos no fue apagado apropiadamente; se está efectuando la recuperación automática
+[09066309P 08134385K] LOG:  redo comienza en 0/87C805F0
+[09066309P 08134385K] LOG:  largo de registro no válido en 0/87C806D8: se esperaba al menos 24, se obtuvo 0
+[09066309P 08134385K] LOG:  redo listo en 0/87C806A0 utilización del sistema: CPU: usuario: 0.00 s, sistema: 0.00 s, transcurrido: 0.00 s
+[09066309P 08134385K] LOG:  empezando checkpoint: end-of-recovery immediate wait
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 3 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.003 s, sync=0.004 s, total=0.015 s; archivos sincronizados=2, más largo=0.003 s, promedio=0.002 s; distancia=0 kB, estimación=0 kB; lsn=0/87C806D8, lsn de redo=0/87C806D8
+[09066309P 08134385K] LOG:  el sistema de bases de datos está listo para aceptar conexiones
+[09066309P 08134385K] ::1(31588)LOG:  sentencia: INSERT INTO tienda.Grupos VALUES ('Logeros2','http://logeros2.com');
+[09066309P 08134385K] LOG:  empezando checkpoint: time
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 6 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.553 s, sync=0.004 s, total=0.565 s; archivos sincronizados=6, más largo=0.002 s, promedio=0.001 s; distancia=8 kB, estimación=8 kB; lsn=0/87C82A30, lsn de redo=0/87C829F8
+[09066309P 08134385K] ::1(40517)ERROR:  error de sintaxis en o cerca de «:» en carácter 28
+[09066309P 08134385K] ::1(40517)SENTENCIA:  CREATE TABLE tienda.Hola(id: integer
+	PRIMARY KEY id);
+[09066309P 08134385K] ::1(40517)LOG:  sentencia: CREATE TABLE tienda.Hola(id integer PRIMARY KEY);
+[09066309P 08134385K] ::1(40517)WARNING:  no hay una transacción en curso
+[09066309P 08134385K] ::1(40517)SENTENCIA:  ROLLBACK;
+[09066309P 08134385K] ::1(40517)ERROR:  error de sintaxis en o cerca de «TABLE» en carácter 8
+[09066309P 08134385K] ::1(40517)SENTENCIA:  DELETE TABLE tienda.Hola;
+[09066309P 08134385K] ::1(40517)LOG:  sentencia: DROP TABLE tienda.Hola;
+[09066309P 08134385K] LOG:  empezando checkpoint: time
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 27 búfers (0.2%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=2.891 s, sync=0.019 s, total=2.917 s; archivos sincronizados=25, más largo=0.003 s, promedio=0.001 s; distancia=146 kB, estimación=146 kB; lsn=0/87CA72C0, lsn de redo=0/87CA7288
+[09066309P 08134385K] ::1(35396)LOG:  sentencia: DROP DATABASE IF EXISTS PL1;
+[09066309P 08134385K] ::1(35396)LOG:  sentencia: CREATE DATABASE PL1;
+[09066309P 08134385K] ::1(35397)FATAL:  no existe la base de datos «PL1»
+[09066309P 08134385K] ::1(35412)LOG:  sentencia: DROP DATABASE IF EXISTS PL1;
+[09066309P 08134385K] LOG:  empezando checkpoint: immediate force wait
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 4 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 1 reciclados; write=0.004 s, sync=0.004 s, total=0.018 s; archivos sincronizados=4, más largo=0.002 s, promedio=0.001 s; distancia=4561 kB, estimación=4561 kB; lsn=0/8811B8F0, lsn de redo=0/8811B8B8
+[09066309P 08134385K] ::1(35412)ERROR:  error de sintaxis en o cerca de «NOT» en carácter 20
+[09066309P 08134385K] ::1(35412)SENTENCIA:  CREATE DATABASE IF NOT EXISTS PL1;
+[09066309P 08134385K] ::1(35413)FATAL:  no existe la base de datos «PL1»
+[09066309P 08134385K] ::1(2044)LOG:  sentencia: DROP DATABASE IF EXISTS PL1;
+[09066309P 08134385K] ::1(2044)LOG:  sentencia: CREATE DATABASE PL1;
+[09066309P 08134385K] ::1(2046)FATAL:  no existe la base de datos «PL1»
+[09066309P 08134385K] ::1(2063)LOG:  sentencia: DROP DATABASE IF EXISTS PL1;
+[09066309P 08134385K] LOG:  empezando checkpoint: immediate force wait
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 4 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.002 s, sync=0.003 s, total=0.011 s; archivos sincronizados=4, más largo=0.002 s, promedio=0.001 s; distancia=4561 kB, estimación=4561 kB; lsn=0/88590090, lsn de redo=0/88590058
+[09066309P 08134385K] ::1(2063)LOG:  sentencia: CREATE DATABASE PL1;
+[09066309P 08134385K] ::1(2064)LOG:  sentencia: CREATE TABLE productos(
+	    producto_id INTEGER PRIMARY KEY,
+	    nombre CHAR(50),
+	    stock INTEGER,
+	    precio INTEGER
+	);
+[09066309P 08134385K] ::1(2064)LOG:  sentencia: COPY  productos FROM STDIN DELIMITER ',' CSV;
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 11 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 10894 búfers (66.5%); 0 archivos WAL añadidos, 2 eliminados, 31 reciclados; write=7.500 s, sync=0.479 s, total=8.109 s; archivos sincronizados=302, más largo=0.249 s, promedio=0.002 s; distancia=539072 kB, estimación=539072 kB; lsn=0/C9688978, lsn de redo=0/A9400160
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 8 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 10855 búfers (66.3%); 0 archivos WAL añadidos, 1 eliminados, 32 reciclados; write=5.562 s, sync=0.259 s, total=5.923 s; archivos sincronizados=2, más largo=0.159 s, promedio=0.130 s; distancia=536727 kB, estimación=538837 kB; lsn=0/E90DF7C8, lsn de redo=0/CA025DE0
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 6 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 10106 búfers (61.7%); 0 archivos WAL añadidos, 1 eliminados, 32 reciclados; write=5.885 s, sync=0.267 s, total=6.249 s; archivos sincronizados=3, más largo=0.165 s, promedio=0.089 s; distancia=540784 kB, estimación=540784 kB; lsn=1/A5787F8, lsn de redo=0/EB042110
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 7 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 9403 búfers (57.4%); 0 archivos WAL añadidos, 1 eliminados, 32 reciclados; write=5.671 s, sync=0.272 s, total=6.043 s; archivos sincronizados=2, más largo=0.182 s, promedio=0.136 s; distancia=540788 kB, estimación=540788 kB; lsn=1/2B742CC8, lsn de redo=1/C05F4C0
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 6 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 10934 búfers (66.7%); 0 archivos WAL añadidos, 1 eliminados, 32 reciclados; write=5.571 s, sync=0.285 s, total=5.951 s; archivos sincronizados=3, más largo=0.164 s, promedio=0.095 s; distancia=540793 kB, estimación=540793 kB; lsn=1/4C27F280, lsn de redo=1/2D07DC48
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 6 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 10651 búfers (65.0%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=269.158 s, sync=0.065 s, total=269.315 s; archivos sincronizados=6, más largo=0.036 s, promedio=0.011 s; distancia=540855 kB, estimación=540855 kB; lsn=1/58B405B0, lsn de redo=1/4E0AB8D0
+[09066309P 08134385K] ::1(2064)LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+[09066309P 08134385K] ::1(40517)FATAL:  terminando la conexión debido al término inesperado de postmaster

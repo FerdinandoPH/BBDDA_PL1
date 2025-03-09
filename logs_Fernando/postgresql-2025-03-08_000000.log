@@ -1,0 +1,63 @@
+[09066309P 08134385K] ::1(43400)LOG:  sentencia: CREATE INDEX IF NOT EXISTS idx_hash_precio ON productos(precio);
+[09066309P 08134385K] ::1(43400)LOG:  sentencia: CREATE EXTENSION IF NOT EXISTS pageinspect;
+[09066309P 08134385K] ::1(43400)ERROR:  input page is not a valid hash page
+[09066309P 08134385K] ::1(43400)DETALLE:  Expected 0000ff80, got 00000000.
+[09066309P 08134385K] ::1(43400)SENTENCIA:  SELECT ntuples, maxbucket FROM hash_metapage_info(get_raw_page('idx_hash_precio',0));
+[09066309P 08134385K] ::1(43459)LOG:  sentencia: CREATE INDEX IF NOT EXISTS idx_hash_precio ON productos(precio);
+[09066309P 08134385K] ::1(43459)LOG:  sentencia: CREATE EXTENSION IF NOT EXISTS pageinspect;
+[09066309P 08134385K] ::1(43459)ERROR:  input page is not a valid hash page
+[09066309P 08134385K] ::1(43459)DETALLE:  Expected 0000ff80, got 00000000.
+[09066309P 08134385K] ::1(43459)SENTENCIA:  SELECT ntuples, maxbucket FROM hash_metapage_info(get_raw_page('idx_hash_precio',0));
+[09066309P 08134385K] LOG:  empezando checkpoint: time
+[09066309P 08134385K] ::1(43459)LOG:  sentencia: DROP INDEX idx_hash_precio;
+[09066309P 08134385K] ::1(43459)WARNING:  no hay una transacción en curso
+[09066309P 08134385K] ::1(43459)SENTENCIA:  COMMIT;
+[09066309P 08134385K] ::1(43662)ERROR:  error de sintaxis en o cerca de «USING» en carácter 65
+[09066309P 08134385K] ::1(43662)SENTENCIA:  CREATE INDEX IF NOT EXISTS idx_hash_precio ON productos(precio) USING hash (producto_id);
+[09066309P 08134385K] ::1(43662)ERROR:  no existe la relación «idx_hash_precio» en carácter 25
+[09066309P 08134385K] ::1(43662)SENTENCIA:  SELECT pg_relation_size('idx_hash_precio') AS tamanno_bytes;
+[09066309P 08134385K] ::1(43662)ERROR:  transacción abortada, las órdenes serán ignoradas hasta el fin de bloque de transacción
+[09066309P 08134385K] ::1(43662)SENTENCIA:  SELECT relname, relfilenode, reltablespace, relpages, reltuples
+	FROM pg_class
+	WHERE relname = 'idx_hash_precio';
+[09066309P 08134385K] ::1(43662)LOG:  sentencia: CREATE EXTENSION IF NOT EXISTS pageinspect;
+[09066309P 08134385K] ::1(43662)ERROR:  transacción abortada, las órdenes serán ignoradas hasta el fin de bloque de transacción
+[09066309P 08134385K] ::1(43662)SENTENCIA:  CREATE EXTENSION IF NOT EXISTS pageinspect;
+[09066309P 08134385K] ::1(43662)ERROR:  transacción abortada, las órdenes serán ignoradas hasta el fin de bloque de transacción
+[09066309P 08134385K] ::1(43662)SENTENCIA:  SELECT ntuples, maxbucket FROM hash_metapage_info(get_raw_page('idx_hash_precio',0));
+[09066309P 08134385K] ::1(43675)ERROR:  error de sintaxis en o cerca de «USING» en carácter 65
+[09066309P 08134385K] ::1(43675)SENTENCIA:  CREATE INDEX IF NOT EXISTS idx_hash_precio ON productos(precio) USING hash (producto_id);
+[09066309P 08134385K] ::1(43675)ERROR:  no existe la relación «idx_hash_precio» en carácter 25
+[09066309P 08134385K] ::1(43675)SENTENCIA:  SELECT pg_relation_size('idx_hash_precio') AS tamanno_bytes;
+[09066309P 08134385K] ::1(43675)ERROR:  transacción abortada, las órdenes serán ignoradas hasta el fin de bloque de transacción
+[09066309P 08134385K] ::1(43675)SENTENCIA:  SELECT relname, relfilenode, reltablespace, relpages, reltuples
+	FROM pg_class
+	WHERE relname = 'idx_hash_precio';
+[09066309P 08134385K] ::1(43675)LOG:  sentencia: CREATE EXTENSION IF NOT EXISTS pageinspect;
+[09066309P 08134385K] ::1(43675)ERROR:  transacción abortada, las órdenes serán ignoradas hasta el fin de bloque de transacción
+[09066309P 08134385K] ::1(43675)SENTENCIA:  CREATE EXTENSION IF NOT EXISTS pageinspect;
+[09066309P 08134385K] ::1(43675)ERROR:  transacción abortada, las órdenes serán ignoradas hasta el fin de bloque de transacción
+[09066309P 08134385K] ::1(43675)SENTENCIA:  SELECT ntuples, maxbucket FROM hash_metapage_info(get_raw_page('idx_hash_precio',0));
+[09066309P 08134385K] ::1(43711)LOG:  sentencia: CREATE INDEX IF NOT EXISTS idx_hash_precio ON productos USING hash (precio);
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 5387 búfers (32.9%); 0 archivos WAL añadidos, 0 eliminados, 31 reciclados; write=174.220 s, sync=0.120 s, total=174.440 s; archivos sincronizados=48, más largo=0.099 s, promedio=0.003 s; distancia=508662 kB, estimación=538274 kB; lsn=23/86717868, lsn de redo=23/684BE5F8
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 1220 búfers (7.4%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=11.516 s, sync=0.218 s, total=11.830 s; archivos sincronizados=2, más largo=0.217 s, promedio=0.109 s; distancia=539906 kB, estimación=539906 kB; lsn=23/A7A83908, lsn de redo=23/893FF000
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 13 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 1230 búfers (7.5%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=11.619 s, sync=0.198 s, total=11.911 s; archivos sincronizados=2, más largo=0.181 s, promedio=0.099 s; distancia=540680 kB, estimación=540680 kB; lsn=23/C8B19428, lsn de redo=23/AA401090
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 13 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] ::1(43711)LOG:  sentencia: CREATE EXTENSION IF NOT EXISTS pageinspect;
+[09066309P 08134385K] ::1(43711)ERROR:  el operador no existe: text / integer en carácter 129
+[09066309P 08134385K] ::1(43711)HINT:  Ningún operador coincide en el nombre y tipos de argumentos. Puede ser necesario agregar conversión explícita de tipos.
+[09066309P 08134385K] ::1(43711)SENTENCIA:  SELECT pg_size_pretty(pg_relation_size('idx_hash_precio')) AS tamanno_bytes, pg_size_pretty(pg_relation_size('idx_hash_precio'))/8192 AS blocks_used;
+[09066309P 08134385K] ::1(43936)LOG:  sentencia: CREATE INDEX IF NOT EXISTS idx_hash_precio ON productos USING hash (precio);
+[09066309P 08134385K] ::1(43936)LOG:  sentencia: CREATE EXTENSION IF NOT EXISTS pageinspect;
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 10343 búfers (63.1%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=269.545 s, sync=0.006 s, total=269.643 s; archivos sincronizados=4, más largo=0.003 s, promedio=0.002 s; distancia=540670 kB, estimación=540679 kB; lsn=23/D4B04EF8, lsn de redo=23/CB400938
+[09066309P 08134385K] ::1(43936)LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+[09066309P 08134385K] LOG:  apagando
+[09066309P 08134385K] LOG:  empezando checkpoint: shutdown immediate
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 5682 búfers (34.7%); 0 archivos WAL añadidos, 0 eliminados, 9 reciclados; write=0.082 s, sync=0.136 s, total=0.274 s; archivos sincronizados=18, más largo=0.058 s, promedio=0.008 s; distancia=154641 kB, estimación=502075 kB; lsn=23/D4B04FA8, lsn de redo=23/D4B04FA8

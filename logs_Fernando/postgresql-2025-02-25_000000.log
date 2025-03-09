@@ -1,0 +1,550 @@
+[09066309P 08134385K] ::1(34157)LOG:  sentencia: DROP DATABASE IF EXISTS PL1;
+[09066309P 08134385K] LOG:  empezando checkpoint: immediate force wait
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 1 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.003 s, sync=0.001 s, total=0.021 s; archivos sincronizados=1, más largo=0.001 s, promedio=0.001 s; distancia=1 kB, estimación=447976 kB; lsn=18/9BEF05E8, lsn de redo=18/9BEF05B0
+[09066309P 08134385K] ::1(34157)LOG:  sentencia: CREATE DATABASE PL1;
+[09066309P 08134385K] ::1(34159)LOG:  sentencia: CREATE TABLE productos(
+	    producto_id INTEGER PRIMARY KEY,
+	    nombre CHAR(20),
+	    stock INTEGER,
+	    precio INTEGER
+	);
+[09066309P 08134385K] ::1(34159)LOG:  sentencia: COPY  productos FROM STDIN DELIMITER ',' CSV;
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 14 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 8694 búfers (53.1%); 0 archivos WAL añadidos, 2 eliminados, 31 reciclados; write=12.189 s, sync=1.177 s, total=13.594 s; archivos sincronizados=302, más largo=0.689 s, promedio=0.004 s; distancia=529477 kB, estimación=529477 kB; lsn=18/DC2A8078, lsn de redo=18/BC4019E8
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 14 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 11353 búfers (69.3%); 0 archivos WAL añadidos, 1 eliminados, 32 reciclados; write=10.954 s, sync=0.574 s, total=11.648 s; archivos sincronizados=2, más largo=0.511 s, promedio=0.287 s; distancia=538986 kB, estimación=538986 kB; lsn=18/FC31E4B0, lsn de redo=18/DD25C210
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 13 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 11920 búfers (72.8%); 0 archivos WAL añadidos, 1 eliminados, 32 reciclados; write=9.461 s, sync=0.450 s, total=10.068 s; archivos sincronizados=3, más largo=0.318 s, promedio=0.150 s; distancia=539424 kB, estimación=539424 kB; lsn=19/1D1596A8, lsn de redo=18/FE124350
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 10 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 11451 búfers (69.9%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=9.766 s, sync=0.317 s, total=10.201 s; archivos sincronizados=2, más largo=0.192 s, promedio=0.159 s; distancia=540552 kB, estimación=540552 kB; lsn=19/3DE8F758, lsn de redo=19/1F1065B8
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 11 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 10467 búfers (63.9%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=269.762 s, sync=0.002 s, total=269.877 s; archivos sincronizados=2, más largo=0.001 s, promedio=0.001 s; distancia=540375 kB, estimación=540534 kB; lsn=19/41A0B920, lsn de redo=19/400BC348
+[09066309P 08134385K] ::1(35531)LOG:  sentencia: CREATE INDEX producto_id_idx ON productos(producto_id);
+[09066309P 08134385K] ERROR:  cancelando tarea de autovacuum
+[09066309P 08134385K] CONTEXTO:  recorriendo el bloque 788 de la relación «public.productos»
+	vacuum automático de la tabla «pl1.public.productos»
+[09066309P 08134385K] LOG:  empezando checkpoint: time
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 1936 búfers (11.8%); 0 archivos WAL añadidos, 0 eliminados, 32 reciclados; write=211.420 s, sync=0.087 s, total=211.649 s; archivos sincronizados=24, más largo=0.051 s, promedio=0.004 s; distancia=526210 kB, estimación=539102 kB; lsn=19/60A3CE38, lsn de redo=19/6029CD90
+[09066309P 08134385K] LOG:  empezando checkpoint: time
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 7 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=4.085 s, sync=0.056 s, total=4.149 s; archivos sincronizados=3, más largo=0.054 s, promedio=0.019 s; distancia=11087 kB, estimación=486300 kB; lsn=19/60D98D10, lsn de redo=19/60D70C38
+[09066309P 08134385K] LOG:  empezando checkpoint: time
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 1243 búfers (7.6%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=133.136 s, sync=0.006 s, total=133.150 s; archivos sincronizados=8, más largo=0.002 s, promedio=0.001 s; distancia=412 kB, estimación=437712 kB; lsn=19/60DD7F18, lsn de redo=19/60DD7EE0
+[09066309P 08134385K] ::1(35531)ERROR:  no existe la función pg_indexam() en carácter 36
+[09066309P 08134385K] ::1(35531)HINT:  Ninguna función coincide en el nombre y tipos de argumentos. Puede ser necesario agregar conversión explícita de tipos.
+[09066309P 08134385K] ::1(35531)SENTENCIA:  SELECT indexname, tree_level 
+	FROM pg_indexam();
+[09066309P 08134385K] ::1(35531)ERROR:  no existe la función pg_indexam() en carácter 36
+[09066309P 08134385K] ::1(35531)HINT:  Ninguna función coincide en el nombre y tipos de argumentos. Puede ser necesario agregar conversión explícita de tipos.
+[09066309P 08134385K] ::1(35531)SENTENCIA:  SELECT indexname, tree_level 
+	FROM pg_indexam();
+[09066309P 08134385K] ::1(35531)ERROR:  no existe la relación «idx_producto_id» en carácter 25
+[09066309P 08134385K] ::1(35531)SENTENCIA:  SELECT pg_relation_size('idx_producto_id') AS size_bytes;
+[09066309P 08134385K] ::1(35531)ERROR:  no existe la relación «producto-id_idx» en carácter 25
+[09066309P 08134385K] ::1(35531)SENTENCIA:  SELECT pg_relation_size('producto-id_idx') AS size_bytes;
+[09066309P 08134385K] ::1(35531)ERROR:  no existe la función pg_index_level(oid) en carácter 30
+[09066309P 08134385K] ::1(35531)HINT:  Ninguna función coincide en el nombre y tipos de argumentos. Puede ser necesario agregar conversión explícita de tipos.
+[09066309P 08134385K] ::1(35531)SENTENCIA:  SELECT indexrelid::regclass, pg_index_level(indexrelid) AS btree_levels
+	FROM pg_index
+	WHERE indexrelid = 'idx_producto_id'::regclass;
+[09066309P 08134385K] ::1(35531)LOG:  sentencia: CREATE EXTENSION IF NOT EXISTS pageinspect;
+[09066309P 08134385K] ::1(35531)ERROR:  no existe la función bt_page_stats(unknown) en carácter 43
+[09066309P 08134385K] ::1(35531)HINT:  Ninguna función coincide en el nombre y tipos de argumentos. Puede ser necesario agregar conversión explícita de tipos.
+[09066309P 08134385K] ::1(35531)SENTENCIA:  SELECT nivel, count(*) AS num_blocks
+	FROM bt_page_stats('idx_producto_id')
+	GROUP BY nivel
+	ORDER BY nivel DESC;
+[09066309P 08134385K] LOG:  empezando checkpoint: time
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 58 búfers (0.4%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=6.123 s, sync=0.008 s, total=6.140 s; archivos sincronizados=17, más largo=0.001 s, promedio=0.001 s; distancia=331 kB, estimación=393974 kB; lsn=19/60E2AC78, lsn de redo=19/60E2AC40
+[09066309P 08134385K] ::1(35531)ERROR:  no existe la columna s.level en carácter 8
+[09066309P 08134385K] ::1(35531)SENTENCIA:  SELECT s.level,
+	       COUNT(*) AS num_bloques
+	FROM generate_series(0, (SELECT relpages - 1 FROM pg_class WHERE relname = 'mi_indice')) AS blkno,
+	     LATERAL bt_page_stats('mi_indice', blkno) s
+	GROUP BY s.level
+	ORDER BY s.level;
+[09066309P 08134385K] ::1(35531)ERROR:  no existe la columna s.level en carácter 8
+[09066309P 08134385K] ::1(35531)SENTENCIA:  SELECT s.level,
+	       COUNT(*) AS num_bloques
+	FROM generate_series(0, (SELECT relpages - 1 FROM pg_class WHERE relname = 'mi_indice')) AS blkno,
+	     LATERAL bt_page_stats('mi_indice', blkno) s
+	GROUP BY s.level
+	ORDER BY s.level;
+[09066309P 08134385K] ::1(35531)ERROR:  la columna «bt_multi_page_stats.blkno» debe aparecer en la cláusula GROUP BY o ser usada en una función de agregación en carácter 8
+[09066309P 08134385K] ::1(35531)SENTENCIA:  SELECT * FROM bt_multi_page_stats('producto_id_idx', 0,-1) GROUP BY btpo_level;
+[09066309P 08134385K] ::1(35531)ERROR:  error de sintaxis en o cerca de «btpo_level» en carácter 75
+[09066309P 08134385K] ::1(35531)SENTENCIA:  SELECT * FROM bt_multi_page_stats('producto_id_idx', 0,-1) GROUP BY blkno btpo_level;
+[09066309P 08134385K] ::1(35531)ERROR:  la columna «bt_multi_page_stats.type» debe aparecer en la cláusula GROUP BY o ser usada en una función de agregación en carácter 8
+[09066309P 08134385K] ::1(35531)SENTENCIA:  SELECT * FROM bt_multi_page_stats('producto_id_idx', 0,-1) GROUP BY blkno, btpo_level;
+[09066309P 08134385K] ::1(35531)ERROR:  la columna «bt_multi_page_stats.live_items» debe aparecer en la cláusula GROUP BY o ser usada en una función de agregación en carácter 8
+[09066309P 08134385K] ::1(35531)SENTENCIA:  SELECT * FROM bt_multi_page_stats('producto_id_idx', 0,-1) GROUP BY blkno, type, btpo_level;
+[09066309P 08134385K] ::1(35531)ERROR:  block 0 is a meta page
+[09066309P 08134385K] ::1(35531)SENTENCIA:  SELECT * FROM bt_multi_page_stats('producto_id_idx', 0,-1);
+[09066309P 08134385K] ::1(35531)ERROR:  error de sintaxis en o cerca de «DISTINCT» en carácter 14
+[09066309P 08134385K] ::1(35531)SENTENCIA:  SELECT blkno,DISTINCT(btpo_level) FROM (SELECT * FROM bt_multi_page_stats('producto_id_idx', 1,-1) ORDER BY btpo_level);
+[09066309P 08134385K] ::1(35531)ERROR:  la columna «bt_multi_page_stats.btpo_level» debe aparecer en la cláusula GROUP BY o ser usada en una función de agregación en carácter 22
+[09066309P 08134385K] ::1(35531)SENTENCIA:  SELECT COUNT(blkno), btpo_level FROM bt_multi_page_stats('producto_id_idx', 1,-1) ORDER BY btpo_level;
+[09066309P 08134385K] ::1(35531)ERROR:  no existe la función bt_multi_page_stats(unknown, integer) en carácter 15
+[09066309P 08134385K] ::1(35531)HINT:  Ninguna función coincide en el nombre y tipos de argumentos. Puede ser necesario agregar conversión explícita de tipos.
+[09066309P 08134385K] ::1(35531)SENTENCIA:  SELECT * FROM bt_multi_page_stats('producto_id_idx',0);
+[09066309P 08134385K] ::1(35531)ERROR:  block 0 is a meta page
+[09066309P 08134385K] ::1(35531)SENTENCIA:  SELECT * FROM bt_page_stats('producto_id_idx',0);
+[09066309P 08134385K] ::1(35531)ERROR:  block number 68550 is out of range
+[09066309P 08134385K] ::1(35531)SENTENCIA:  SELECT live_items FROM bt_page_stats('producto_id_idx',68550);
+[09066309P 08134385K] ::1(35531)LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+[09066309P 08134385K] ::1(4766)ERROR:  error de sintaxis en o cerca de «USING» en carácter 75
+[09066309P 08134385K] ::1(4766)SENTENCIA:  CREATE INDEX IF NOT EXISTS idx_hash_producto_id ON productos(producto_id) USING HASH;
+[09066309P 08134385K] ::1(4766)ERROR:  transacción abortada, las órdenes serán ignoradas hasta el fin de bloque de transacción
+[09066309P 08134385K] ::1(4766)SENTENCIA:  SELECT oid, datname FROM pg_database WHERE datname = current_database();
+[09066309P 08134385K] ::1(4766)ERROR:  transacción abortada, las órdenes serán ignoradas hasta el fin de bloque de transacción
+[09066309P 08134385K] ::1(4766)SENTENCIA:  SELECT pg_relation_size('idx_hash_producto_id') AS tamanno_bytes;
+[09066309P 08134385K] ::1(4766)ERROR:  transacción abortada, las órdenes serán ignoradas hasta el fin de bloque de transacción
+[09066309P 08134385K] ::1(4766)SENTENCIA:  SELECT relname, relfilenode, reltablespace, relpages, reltuples
+	FROM pg_class
+	WHERE relname = 'idx_hash_producto_id';
+[09066309P 08134385K] ::1(5016)LOG:  sentencia: CREATE INDEX IF NOT EXISTS idx_hash_producto_id ON productos USING hash (producto_id);
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 31 búfers (0.2%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=7.041 s, sync=0.163 s, total=7.301 s; archivos sincronizados=16, más largo=0.151 s, promedio=0.011 s; distancia=530259 kB, estimación=530259 kB; lsn=19/9F660998, lsn de redo=19/813FF978
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 8 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 52 búfers (0.3%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=7.045 s, sync=0.094 s, total=7.228 s; archivos sincronizados=1, más largo=0.094 s, promedio=0.094 s; distancia=540672 kB, estimación=540672 kB; lsn=19/C087C7E8, lsn de redo=19/A23FFAC0
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 8 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] ::1(5016)ERROR:  error de sintaxis en o cerca de «MMIT» en carácter 1
+[09066309P 08134385K] ::1(5016)SENTENCIA:  MMIT;
+[09066309P 08134385K] ::1(5154)LOG:  sentencia: CREATE INDEX IF NOT EXISTS idx_hash_producto_id ON productos USING hash (producto_id);
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 16 búfers (0.1%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=66.508 s, sync=0.118 s, total=66.722 s; archivos sincronizados=18, más largo=0.103 s, promedio=0.007 s; distancia=539609 kB, estimación=540566 kB; lsn=19/E18FEF38, lsn de redo=19/C32F60D8
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 27 búfers (0.2%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=7.044 s, sync=0.096 s, total=7.235 s; archivos sincronizados=2, más largo=0.095 s, promedio=0.048 s; distancia=541727 kB, estimación=541727 kB; lsn=1A/27ADDC0, lsn de redo=19/E43FE088
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 8 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 35 búfers (0.2%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=7.151 s, sync=0.100 s, total=7.349 s; archivos sincronizados=1, más largo=0.100 s, promedio=0.100 s; distancia=539821 kB, estimación=541537 kB; lsn=1A/2364D1E0, lsn de redo=1A/53294A8
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 8 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 284 búfers (1.7%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=269.954 s, sync=0.001 s, total=270.060 s; archivos sincronizados=1, más largo=0.001 s, promedio=0.001 s; distancia=541533 kB, estimación=541536 kB; lsn=1A/3978B098, lsn de redo=1A/26400BC0
+[09066309P 08134385K] ::1(5154)ERROR:  no existe la relación «idx_tree_producto_id»
+[09066309P 08134385K] ::1(5154)SENTENCIA:  SELECT COUNT(blkno), btpo_level FROM bt_multi_page_stats('idx_tree_producto_id', 1,-1) GROUP BY btpo_level;
+[09066309P 08134385K] ::1(5154)LOG:  sentencia: DROP INDEX producto_id_idx
+	;
+[09066309P 08134385K] ::1(5154)LOG:  sentencia: CREATE INDEX IF NOT EXISTS idx_tree_producto_id ON productos(producto_id);
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 4317 búfers (26.3%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=238.926 s, sync=0.008 s, total=239.070 s; archivos sincronizados=16, más largo=0.001 s, promedio=0.001 s; distancia=540663 kB, estimación=541449 kB; lsn=1A/57E85210, lsn de redo=1A/473FEAD0
+[09066309P 08134385K] ::1(5154)ERROR:  error de sintaxis en o cerca de «HAVING» en carácter 85
+[09066309P 08134385K] ::1(5154)SENTENCIA:  SELECT * FROM bt_multi_page_stats('idx_tree_producto_id', 1,-1) ORDER BY btpo_level HAVING btpo_level = 1;
+[09066309P 08134385K] ::1(5154)ERROR:  error de sintaxis en o cerca de «WHERE» en carácter 80
+[09066309P 08134385K] ::1(5154)SENTENCIA:  SELECT * FROM bt_multi_page_stats('idx_tree_producto_id', 1,-1) ORDER BY blkno WHERE btpo_level = 1;
+[09066309P 08134385K] ::1(5154)ERROR:  para SELECT DISTINCT, las expresiones en ORDER BY deben aparecer en la lista de resultados en carácter 114
+[09066309P 08134385K] ::1(5154)SENTENCIA:  SELECT DISTINCT(live_items) FROM bt_multi_page_stats('idx_tree_producto_id', 1,-1) WHERE btpo_level = 0 ORDER BY blkno;
+[09066309P 08134385K] ::1(5154)ERROR:  error de sintaxis en o cerca de «DISTINCT» en carácter 14
+[09066309P 08134385K] ::1(5154)SENTENCIA:  SELECT blkno,DISTINCT(live_items) FROM bt_multi_page_stats('idx_tree_producto_id', 1,-1) WHERE btpo_level = 0 ORDER BY blkno;
+[09066309P 08134385K] ::1(5154)ERROR:  error de sintaxis en o cerca de «DISTINCT» en carácter 15
+[09066309P 08134385K] ::1(5154)SENTENCIA:  SELECT blkno, DISTINCT(live_items) FROM bt_multi_page_stats('idx_tree_producto_id', 1,-1) WHERE btpo_level = 0 ORDER BY blkno;
+[09066309P 08134385K] ::1(5154)ERROR:  para SELECT DISTINCT, las expresiones en ORDER BY deben aparecer en la lista de resultados en carácter 121
+[09066309P 08134385K] ::1(5154)SENTENCIA:  SELECT DISTINCT(blkno, live_items) FROM bt_multi_page_stats('idx_tree_producto_id', 1,-1) WHERE btpo_level = 0 ORDER BY blkno;
+[09066309P 08134385K] ::1(5154)ERROR:  las expresiones de SELECT DISTINCT ON deben coincidir con las expresiones iniciales de ORDER BY en carácter 21
+[09066309P 08134385K] ::1(5154)SENTENCIA:  SELECT DISTINCT ON (live_items) live_items FROM bt_multi_page_stats('idx_tree_producto_id', 1,-1) WHERE btpo_level = 0 ORDER BY blkno;
+[09066309P 08134385K] ::1(5154)ERROR:  la columna «bt_multi_page_stats.live_items» debe aparecer en la cláusula GROUP BY o ser usada en una función de agregación en carácter 33
+[09066309P 08134385K] ::1(5154)SENTENCIA:  SELECT DISTINCT ON (live_items) live_items FROM bt_multi_page_stats('idx_tree_producto_id', 1,-1) GROUP BY btpo_level;
+[09066309P 08134385K] LOG:  empezando checkpoint: time
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 1 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 16 reciclados; write=0.002 s, sync=0.002 s, total=0.075 s; archivos sincronizados=2, más largo=0.001 s, promedio=0.001 s; distancia=272929 kB, estimación=514597 kB; lsn=1A/57E86FC8, lsn de redo=1A/57E86F90
+[09066309P 08134385K] LOG:  empezando checkpoint: time
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 4 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.434 s, sync=0.003 s, total=0.445 s; archivos sincronizados=3, más largo=0.001 s, promedio=0.001 s; distancia=7 kB, estimación=463138 kB; lsn=1A/57E88F08, lsn de redo=1A/57E88ED0
+[09066309P 08134385K] ::1(5154)ERROR:  error de sintaxis en o cerca de «FROM» en carácter 1
+[09066309P 08134385K] ::1(5154)SENTENCIA:  FROM bt_page_items('idx_tree_producto_id', 5325);
+[09066309P 08134385K] ::1(5154)ERROR:  error de sintaxis en o cerca de «ELECT» en carácter 1
+[09066309P 08134385K] ::1(5154)SENTENCIA:  ELECT relname, relfilenode, reltablespace, relpages, reltuples
+	FROM pg_class
+	WHERE relname = 'idx_hash_producto_id';
+[09066309P 08134385K] ::1(5154)ERROR:  no existe la función hash_page_stat(unknown) en carácter 15
+[09066309P 08134385K] ::1(5154)HINT:  Ninguna función coincide en el nombre y tipos de argumentos. Puede ser necesario agregar conversión explícita de tipos.
+[09066309P 08134385K] ::1(5154)SENTENCIA:  SELECT * FROM hash_page_stat('idx_hash_producto_id');
+[09066309P 08134385K] ::1(5154)ERROR:  invalid page size
+[09066309P 08134385K] ::1(5154)DETALLE:  Expected 8192 bytes, got 20.
+[09066309P 08134385K] ::1(5154)SENTENCIA:  SELECT * FROM hash_page_stats('idx_hash_producto_id');
+[09066309P 08134385K] ::1(5154)ERROR:  invalid page size
+[09066309P 08134385K] ::1(5154)DETALLE:  Expected 8192 bytes, got 20.
+[09066309P 08134385K] ::1(5154)SENTENCIA:  SELECT * FROM hash_metapage_info('idx_hash_producto_id');
+[09066309P 08134385K] ::1(5154)ERROR:  invalid page size
+[09066309P 08134385K] ::1(5154)DETALLE:  Expected 8192 bytes, got 17.
+[09066309P 08134385K] ::1(5154)SENTENCIA:  SELECT * FROM hash_metapage_info('nombre_del_indice');
+[09066309P 08134385K] ::1(5154)ERROR:  invalid page size
+[09066309P 08134385K] ::1(5154)DETALLE:  Expected 8192 bytes, got 20.
+[09066309P 08134385K] ::1(5154)SENTENCIA:  SELECT * FROM hash_metapage_info('idx_hash_producto_id');
+[09066309P 08134385K] ::1(5154)ERROR:  invalid page size
+[09066309P 08134385K] ::1(5154)DETALLE:  Expected 8192 bytes, got 20.
+[09066309P 08134385K] ::1(5154)SENTENCIA:  SELECT * FROM hash_metapage_info('idx_hash_producto_id');
+[09066309P 08134385K] ::1(5154)ERROR:  invalid page size
+[09066309P 08134385K] ::1(5154)DETALLE:  Expected 8192 bytes, got 20.
+[09066309P 08134385K] ::1(5154)SENTENCIA:  SELECT * FROM hash_metapage_info('idx_hash_producto_id');
+[09066309P 08134385K] ::1(5154)ERROR:  invalid page size
+[09066309P 08134385K] ::1(5154)DETALLE:  Expected 8192 bytes, got 20.
+[09066309P 08134385K] ::1(5154)SENTENCIA:  SELECT * FROM hash_metapage_info('idx_hash_producto_id');
+[09066309P 08134385K] ::1(5154)ERROR:  invalid page size
+[09066309P 08134385K] ::1(5154)DETALLE:  Expected 8192 bytes, got 20.
+[09066309P 08134385K] ::1(5154)SENTENCIA:  SELECT * FROM hash_metapage_info('idx_hash_producto_id');
+[09066309P 08134385K] LOG:  empezando checkpoint: time
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 4 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.438 s, sync=0.002 s, total=0.449 s; archivos sincronizados=2, más largo=0.001 s, promedio=0.001 s; distancia=8 kB, estimación=416825 kB; lsn=1A/57E8AF10, lsn de redo=1A/57E8AED8
+[09066309P 08134385K] ::1(5154)ERROR:  invalid page size
+[09066309P 08134385K] ::1(5154)DETALLE:  Expected 8192 bytes, got 20.
+[09066309P 08134385K] ::1(5154)SENTENCIA:  SELECT * FROM hash_metapage_info('idx_hash_producto_id');
+[09066309P 08134385K] ::1(11645)ERROR:  invalid page size
+[09066309P 08134385K] ::1(11645)DETALLE:  Expected 8192 bytes, got 20.
+[09066309P 08134385K] ::1(11645)SENTENCIA:  SELECT * FROM hash_metapage_info('idx_hash_producto_id');
+[09066309P 08134385K] ::1(11645)LOG:  sentencia: CREATE INDEX IF NOT EXISTS idx_hash_precio ON productos USING hash (precio);
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 1221 búfers (7.5%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=12.319 s, sync=0.290 s, total=12.714 s; archivos sincronizados=16, más largo=0.276 s, promedio=0.019 s; distancia=526116 kB, estimación=526116 kB; lsn=1A/966A3A88, lsn de redo=1A/78054040
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 14 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 1221 búfers (7.5%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=12.214 s, sync=0.187 s, total=12.508 s; archivos sincronizados=2, más largo=0.172 s, promedio=0.094 s; distancia=544437 kB, estimación=544437 kB; lsn=1A/B759A5E8, lsn de redo=1A/994016F0
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 13 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] ::1(11645)LOG:  sentencia: CREATE EXTENSION IF NOT EXISTS pageinspect;
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 9978 búfers (60.9%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=269.435 s, sync=0.002 s, total=269.550 s; archivos sincronizados=2, más largo=0.001 s, promedio=0.001 s; distancia=540661 kB, estimación=544060 kB; lsn=1A/C4495F40, lsn de redo=1A/BA3FEBE8
+[09066309P 08134385K] ::1(11645)LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+[09066309P 08134385K] ::1(18342)LOG:  sentencia: CREATE INDEX IF NOT EXISTS idx_hash_precio ON productos USING hash (precio);
+[09066309P 08134385K] ::1(18342)ERROR:  no existe la relación «productos»
+[09066309P 08134385K] ::1(18342)SENTENCIA:  CREATE INDEX IF NOT EXISTS idx_hash_precio ON productos USING hash (precio);
+[09066309P 08134385K] ::1(18342)ERROR:  transacción abortada, las órdenes serán ignoradas hasta el fin de bloque de transacción
+[09066309P 08134385K] ::1(18342)SENTENCIA:  SELECT oid, datname FROM pg_database WHERE datname = current_database();
+[09066309P 08134385K] ::1(18342)ERROR:  transacción abortada, las órdenes serán ignoradas hasta el fin de bloque de transacción
+[09066309P 08134385K] ::1(18342)SENTENCIA:  SELECT pg_relation_size('idx_hash_precio') AS tamanno_bytes;
+[09066309P 08134385K] ::1(18342)ERROR:  transacción abortada, las órdenes serán ignoradas hasta el fin de bloque de transacción
+[09066309P 08134385K] ::1(18342)SENTENCIA:  SELECT relname, relfilenode, reltablespace, relpages, reltuples
+	FROM pg_class
+	WHERE relname = 'idx_hash_precio';
+[09066309P 08134385K] ::1(18342)LOG:  sentencia: CREATE EXTENSION IF NOT EXISTS pageinspect;
+[09066309P 08134385K] ::1(18342)ERROR:  transacción abortada, las órdenes serán ignoradas hasta el fin de bloque de transacción
+[09066309P 08134385K] ::1(18342)SENTENCIA:  CREATE EXTENSION IF NOT EXISTS pageinspect;
+[09066309P 08134385K] ::1(18342)ERROR:  transacción abortada, las órdenes serán ignoradas hasta el fin de bloque de transacción
+[09066309P 08134385K] ::1(18342)SENTENCIA:  SELECT ntuples, maxbucket FROM hash_metapage_info(get_raw_page('idx_hash_precio',0));
+[09066309P 08134385K] ::1(18398)LOG:  sentencia: CREATE INDEX IF NOT EXISTS idx_hash_precio ON productos USING hash (precio);
+[09066309P 08134385K] ::1(18398)LOG:  sentencia: CREATE EXTENSION IF NOT EXISTS pageinspect;
+[09066309P 08134385K] ::1(19702)LOG:  sentencia: DROP INDEX IF EXISTS idx_tree_producto_id;
+[09066309P 08134385K] ::1(19702)LOG:  sentencia: DROP INDEX IF EXISTS idx_hash_producto_id;
+[09066309P 08134385K] ::1(19702)LOG:  sentencia: DROP INDEX IF EXISTS idx_hash_precio;
+[09066309P 08134385K] ::1(19702)LOG:  sentencia: DROP INDEX IF EXISTS idx_tree_precio;
+[09066309P 08134385K] ::1(19702)LOG:  sentencia: DROP TABLE IF EXISTS productos;
+[09066309P 08134385K] ::1(19702)LOG:  sentencia: CREATE TABLE productos(
+	    producto_id INTEGER PRIMARY KEY,
+	    nombre CHAR(20),
+	    stock INTEGER,
+	    precio INTEGER
+	);
+[09066309P 08134385K] ::1(19702)LOG:  sentencia: COPY  productos FROM STDIN DELIMITER ',' CSV;
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 9276 búfers (56.6%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=9.782 s, sync=0.292 s, total=10.191 s; archivos sincronizados=28, más largo=0.190 s, promedio=0.011 s; distancia=540676 kB, estimación=543721 kB; lsn=1A/F9E5F160, lsn de redo=1A/DB3FFC00
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 10 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 8407 búfers (51.3%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=8.024 s, sync=0.219 s, total=8.342 s; archivos sincronizados=3, más largo=0.177 s, promedio=0.073 s; distancia=538166 kB, estimación=543166 kB; lsn=1B/1AD2AFE0, lsn de redo=1A/FC18D5B0
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 9 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 12234 búfers (74.7%); 0 archivos WAL añadidos, 1 eliminados, 32 reciclados; write=7.030 s, sync=0.268 s, total=7.397 s; archivos sincronizados=3, más largo=0.098 s, promedio=0.090 s; distancia=539525 kB, estimación=542802 kB; lsn=1B/3C31BAE0, lsn de redo=1B/1D06EB40
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 8 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 12072 búfers (73.7%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=6.728 s, sync=0.241 s, total=7.067 s; archivos sincronizados=2, más largo=0.171 s, promedio=0.121 s; distancia=540931 kB, estimación=542615 kB; lsn=1B/5CF15B88, lsn de redo=1B/3E0AFB38
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 7 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] ::1(19702)LOG:  sentencia: CREATE INDEX IF NOT EXISTS idx_tree_producto_id ON productos USING hash (producto_id);
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 3118 búfers (19.0%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=20.015 s, sync=0.096 s, total=20.201 s; archivos sincronizados=16, más largo=0.084 s, promedio=0.006 s; distancia=541397 kB, estimación=542493 kB; lsn=1B/7D6A3200, lsn de redo=1B/5F164FC8
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 21 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 11993 búfers (73.2%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=7.455 s, sync=0.118 s, total=7.676 s; archivos sincronizados=1, más largo=0.118 s, promedio=0.118 s; distancia=543334 kB, estimación=543334 kB; lsn=1B/9E2ABDC0, lsn de redo=1B/803FEB68
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 9 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 7900 búfers (48.2%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=7.125 s, sync=0.132 s, total=7.352 s; archivos sincronizados=1, más largo=0.132 s, promedio=0.132 s; distancia=540682 kB, estimación=543069 kB; lsn=1B/BFAC1980, lsn de redo=1B/A1401578
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 7 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 4670 búfers (28.5%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=6.456 s, sync=0.191 s, total=6.745 s; archivos sincronizados=1, más largo=0.191 s, promedio=0.191 s; distancia=540672 kB, estimación=542829 kB; lsn=1B/E06010E8, lsn de redo=1B/C2401700
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 8 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] ::1(19702)LOG:  sentencia: CREATE INDEX IF NOT EXISTS idx_tree_precio ON productos(precio);
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 4640 búfers (28.3%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=16.485 s, sync=0.095 s, total=16.687 s; archivos sincronizados=2, más largo=0.094 s, promedio=0.048 s; distancia=540670 kB, estimación=542614 kB; lsn=1C/FAAB20, lsn de redo=1B/E3401298
+[09066309P 08134385K] ::1(19893)LOG:  sentencia: DROP INDEX IF EXISTS idx_tree_producto_id;
+[09066309P 08134385K] ::1(19893)LOG:  sentencia: DROP INDEX IF EXISTS idx_hash_producto_id;
+[09066309P 08134385K] ::1(19893)LOG:  sentencia: DROP INDEX IF EXISTS idx_hash_precio;
+[09066309P 08134385K] ::1(19893)LOG:  sentencia: DROP INDEX IF EXISTS idx_tree_precio;
+[09066309P 08134385K] ::1(19893)LOG:  sentencia: DROP TABLE IF EXISTS productos;
+[09066309P 08134385K] ::1(19893)LOG:  sentencia: CREATE TABLE productos(
+	    producto_id INTEGER PRIMARY KEY,
+	    nombre CHAR(20),
+	    stock INTEGER,
+	    precio INTEGER
+	);
+[09066309P 08134385K] ::1(19893)LOG:  sentencia: COPY  productos FROM STDIN DELIMITER ',' CSV;
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 29 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 1394 búfers (8.5%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=10.339 s, sync=0.188 s, total=10.631 s; archivos sincronizados=26, más largo=0.121 s, promedio=0.008 s; distancia=540679 kB, estimación=542420 kB; lsn=1C/226AFB98, lsn de redo=1C/4403180
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 11 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 8195 búfers (50.0%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=8.855 s, sync=0.229 s, total=9.181 s; archivos sincronizados=2, más largo=0.128 s, promedio=0.115 s; distancia=540661 kB, estimación=542244 kB; lsn=1C/438E80D0, lsn de redo=1C/254008C0
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 10 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 12268 búfers (74.9%); 0 archivos WAL añadidos, 1 eliminados, 32 reciclados; write=8.141 s, sync=0.247 s, total=8.518 s; archivos sincronizados=3, más largo=0.171 s, promedio=0.083 s; distancia=540662 kB, estimación=542086 kB; lsn=1C/651EC7E0, lsn de redo=1C/463FE268
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 9 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 12310 búfers (75.1%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=7.042 s, sync=0.237 s, total=7.371 s; archivos sincronizados=3, más largo=0.146 s, promedio=0.079 s; distancia=537887 kB, estimación=541666 kB; lsn=1C/85ACAF70, lsn de redo=1C/67146220
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 8 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] ::1(19893)LOG:  sentencia: CREATE INDEX IF NOT EXISTS idx_hash_producto_id ON productos USING hash (producto_id);
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 11903 búfers (72.7%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=7.270 s, sync=0.335 s, total=7.710 s; archivos sincronizados=2, más largo=0.188 s, promedio=0.168 s; distancia=541952 kB, estimación=541952 kB; lsn=1C/A6711478, lsn de redo=1C/88286438
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 21 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 1572 búfers (9.6%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=7.464 s, sync=0.108 s, total=7.675 s; archivos sincronizados=16, más largo=0.053 s, promedio=0.007 s; distancia=542064 kB, estimación=542064 kB; lsn=1C/C76A53E0, lsn de redo=1C/A93E2808
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 9 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 2053 búfers (12.5%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=7.907 s, sync=0.124 s, total=8.126 s; archivos sincronizados=1, más largo=0.124 s, promedio=0.124 s; distancia=540794 kB, estimación=541937 kB; lsn=1C/E88C4AA0, lsn de redo=1C/CA4013E0
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 8 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 7051 búfers (43.0%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=6.680 s, sync=0.179 s, total=6.962 s; archivos sincronizados=1, más largo=0.179 s, promedio=0.179 s; distancia=540669 kB, estimación=541811 kB; lsn=1D/9685B28, lsn de redo=1C/EB400988
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 8 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 7503 búfers (45.8%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=6.914 s, sync=0.196 s, total=7.208 s; archivos sincronizados=1, más largo=0.196 s, promedio=0.196 s; distancia=540675 kB, estimación=541697 kB; lsn=1D/2A7D03A8, lsn de redo=1D/C4018E8
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 8 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] ::1(19893)LOG:  sentencia: CREATE INDEX IF NOT EXISTS idx_tree_precio ON productos(precio);
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 7729 búfers (47.2%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=269.873 s, sync=0.067 s, total=270.062 s; archivos sincronizados=5, más largo=0.058 s, promedio=0.014 s; distancia=539234 kB, estimación=541451 kB; lsn=1D/3E03DD68, lsn de redo=1D/2D29A100
+[09066309P 08134385K] LOG:  empezando checkpoint: time
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 5060 búfers (30.9%); 0 archivos WAL añadidos, 0 eliminados, 17 reciclados; write=269.427 s, sync=0.039 s, total=269.533 s; archivos sincronizados=19, más largo=0.020 s, promedio=0.003 s; distancia=277214 kB, estimación=515027 kB; lsn=1D/3E53EF58, lsn de redo=1D/3E151C80
+[09066309P 08134385K] ::1(21416)ERROR:  no existe la columna «blk_read» en carácter 8
+[09066309P 08134385K] ::1(21416)HINT:  Probablemente quiera hacer referencia a la columna «pg_stat_database.blks_read».
+[09066309P 08134385K] ::1(21416)SENTENCIA:  SELECT blk_read, blk_hit FROM pg_stat_database WHERE datname = current_database();
+[09066309P 08134385K] ::1(21416)ERROR:  transacción abortada, las órdenes serán ignoradas hasta el fin de bloque de transacción
+[09066309P 08134385K] ::1(21416)SENTENCIA:  SELECT pg_stat_reset();
+[09066309P 08134385K] ::1(22292)ERROR:  error de sintaxis en o cerca de «BUFFERS» en carácter 9
+[09066309P 08134385K] ::1(22292)SENTENCIA:  EXPLAIN BUFFERS SELECT * FROM productos WHERE precio = 2000;
+[09066309P 08134385K] ::1(22292)ERROR:  transacción abortada, las órdenes serán ignoradas hasta el fin de bloque de transacción
+[09066309P 08134385K] ::1(22292)SENTENCIA:  SELECT pg_stat_reset();
+[09066309P 08134385K] ::1(22292)ERROR:  transacción abortada, las órdenes serán ignoradas hasta el fin de bloque de transacción
+[09066309P 08134385K] ::1(22292)SENTENCIA:  SELECT blks_read, blks_hit FROM pg_stat_database WHERE datname = current_database();
+[09066309P 08134385K] ::1(22292)ERROR:  transacción abortada, las órdenes serán ignoradas hasta el fin de bloque de transacción
+[09066309P 08134385K] ::1(22292)SENTENCIA:  SELECT pg_stat_reset();
+[09066309P 08134385K] ::1(22307)ERROR:  error de sintaxis en o cerca de «BUFFERS» en carácter 17
+[09066309P 08134385K] ::1(22307)SENTENCIA:  EXPLAIN ANALYZE BUFFERS SELECT * FROM productos WHERE precio = 2000;
+[09066309P 08134385K] ::1(22307)ERROR:  transacción abortada, las órdenes serán ignoradas hasta el fin de bloque de transacción
+[09066309P 08134385K] ::1(22307)SENTENCIA:  SELECT pg_stat_reset();
+[09066309P 08134385K] ::1(22307)ERROR:  transacción abortada, las órdenes serán ignoradas hasta el fin de bloque de transacción
+[09066309P 08134385K] ::1(22307)SENTENCIA:  SELECT blks_read, blks_hit FROM pg_stat_database WHERE datname = current_database();
+[09066309P 08134385K] ::1(22307)ERROR:  transacción abortada, las órdenes serán ignoradas hasta el fin de bloque de transacción
+[09066309P 08134385K] ::1(22307)SENTENCIA:  SELECT pg_stat_reset();
+[09066309P 08134385K] ::1(22434)LOG:  sentencia: DROP INDEX IF EXISTS idx_tree_producto_id;
+[09066309P 08134385K] ::1(22434)LOG:  sentencia: DROP INDEX IF EXISTS idx_hash_producto_id;
+[09066309P 08134385K] ::1(22434)LOG:  sentencia: DROP INDEX IF EXISTS idx_hash_precio;
+[09066309P 08134385K] ::1(22434)LOG:  sentencia: DROP INDEX IF EXISTS idx_tree_precio;
+[09066309P 08134385K] ::1(22434)LOG:  sentencia: DROP TABLE IF EXISTS productos;
+[09066309P 08134385K] ::1(22434)LOG:  sentencia: CREATE TABLE productos(
+	    producto_id INTEGER PRIMARY KEY,
+	    nombre CHAR(20),
+	    stock INTEGER,
+	    precio INTEGER
+	);
+[09066309P 08134385K] ::1(22434)LOG:  sentencia: COPY  productos FROM STDIN DELIMITER ',' CSV;
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 8217 búfers (50.2%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=10.412 s, sync=0.292 s, total=10.803 s; archivos sincronizados=27, más largo=0.176 s, promedio=0.011 s; distancia=540355 kB, estimación=540355 kB; lsn=1D/7DF5C5E0, lsn de redo=1D/5F102C40
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 11 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 12352 búfers (75.4%); 0 archivos WAL añadidos, 1 eliminados, 32 reciclados; write=8.574 s, sync=0.260 s, total=8.932 s; archivos sincronizados=2, más largo=0.176 s, promedio=0.130 s; distancia=541158 kB, estimación=541158 kB; lsn=1D/9F0B1708, lsn de redo=1D/8017C5B0
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 9 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 12751 búfers (77.8%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=6.828 s, sync=0.239 s, total=7.168 s; archivos sincronizados=3, más largo=0.133 s, promedio=0.080 s; distancia=539528 kB, estimación=540995 kB; lsn=1D/BFC3CF60, lsn de redo=1D/A105E6F0
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 8 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 12560 búfers (76.7%); 0 archivos WAL añadidos, 1 eliminados, 32 reciclados; write=6.715 s, sync=0.260 s, total=7.075 s; archivos sincronizados=2, más largo=0.178 s, promedio=0.130 s; distancia=541163 kB, estimación=541163 kB; lsn=1D/E12C5D60, lsn de redo=1D/C20D95A8
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 7 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] ::1(22434)LOG:  sentencia: CREATE INDEX IF NOT EXISTS idx_hash_producto_id ON productos USING hash (producto_id);
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 175 búfers (1.1%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=20.086 s, sync=0.061 s, total=20.239 s; archivos sincronizados=16, más largo=0.048 s, promedio=0.004 s; distancia=540313 kB, estimación=541078 kB; lsn=1E/107D6E0, lsn de redo=1D/E307FCC8
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 21 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 1070 búfers (6.5%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=7.672 s, sync=0.123 s, total=7.893 s; archivos sincronizados=1, más largo=0.123 s, promedio=0.123 s; distancia=544255 kB, estimación=544255 kB; lsn=1E/22A4ACF8, lsn de redo=1E/43FFB60
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 9 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 4223 búfers (25.8%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=6.364 s, sync=0.152 s, total=6.621 s; archivos sincronizados=1, más largo=0.152 s, promedio=0.152 s; distancia=538297 kB, estimación=543659 kB; lsn=1E/439EAE40, lsn de redo=1E/251AE1F0
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 7 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 6878 búfers (42.0%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=6.275 s, sync=0.213 s, total=6.586 s; archivos sincronizados=1, más largo=0.213 s, promedio=0.213 s; distancia=542680 kB, estimación=543561 kB; lsn=1E/64B84238, lsn de redo=1E/463A4528
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 7 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] ::1(22434)LOG:  sentencia: CREATE INDEX IF NOT EXISTS idx_hash_precio ON productos USING hash (precio);
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 472 búfers (2.9%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=25.113 s, sync=0.144 s, total=25.361 s; archivos sincronizados=15, más largo=0.128 s, promedio=0.010 s; distancia=541039 kB, estimación=543309 kB; lsn=1E/8553A600, lsn de redo=1E/674004B0
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 26 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 981 búfers (6.0%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=11.949 s, sync=0.180 s, total=12.228 s; archivos sincronizados=1, más largo=0.180 s, promedio=0.180 s; distancia=540665 kB, estimación=543045 kB; lsn=1E/A65070D0, lsn de redo=1E/883FEB18
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 14 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 1218 búfers (7.4%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=11.954 s, sync=0.173 s, total=12.237 s; archivos sincronizados=1, más largo=0.173 s, promedio=0.173 s; distancia=540675 kB, estimación=542808 kB; lsn=1E/C7521BB8, lsn de redo=1E/A93FF900
+[09066309P 08134385K] LOG:  los puntos de control están ocurriendo con demasiada frecuencia (cada 13 segundos)
+[09066309P 08134385K] HINT:  Considere incrementar el parámetro de configuración «max_wal_size».
+[09066309P 08134385K] LOG:  empezando checkpoint: wal
+[09066309P 08134385K] ::1(22434)LOG:  sentencia: CREATE INDEX IF NOT EXISTS idx_tree_precio ON productos(precio);
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 4332 búfers (26.4%); 0 archivos WAL añadidos, 0 eliminados, 33 reciclados; write=22.651 s, sync=0.005 s, total=22.758 s; archivos sincronizados=3, más largo=0.004 s, promedio=0.002 s; distancia=539762 kB, estimación=542503 kB; lsn=1E/E7D85B98, lsn de redo=1E/CA31C430
+[09066309P 08134385K] ::1(22958)ERROR:  parámetro de configuración «enable_parallel_scan» no reconocido
+[09066309P 08134385K] ::1(22958)SENTENCIA:  SET enable_parallel_scan = OFF;
+[09066309P 08134385K] ::1(23228)ERROR:  error de sintaxis en o cerca de «HERE» en carácter 1
+[09066309P 08134385K] ::1(23228)SENTENCIA:  HERE relname = 'productos';
+[09066309P 08134385K] ::1(23228)ERROR:  no existe la columna «blks_read» en carácter 17
+[09066309P 08134385K] ::1(23228)SENTENCIA:  SELECT relname, blks_read, blks_hit
+	FROM pg_statio_user_tables
+	WHERE relname = 'productos';
+[09066309P 08134385K] ::1(23228)WARNING:  no hay una transacción en curso
+[09066309P 08134385K] ::1(23228)SENTENCIA:  COMMIT;
+[09066309P 08134385K] ::1(24357)ERROR:  no existe la columna «blks_read» en carácter 8
+[09066309P 08134385K] ::1(24357)SENTENCIA:  SELECT blks_read, blks_hit FROM pg_stat_user_tables WHERE relname = 'productos';
+[09066309P 08134385K] ::1(24357)ERROR:  transacción abortada, las órdenes serán ignoradas hasta el fin de bloque de transacción
+[09066309P 08134385K] ::1(24357)SENTENCIA:  SELECT relname, blks_read, blks_hit
+	FROM pg_statio_user_tables
+	WHERE relname = 'productos';
+[09066309P 08134385K] ::1(24357)ERROR:  transacción abortada, las órdenes serán ignoradas hasta el fin de bloque de transacción
+[09066309P 08134385K] ::1(24357)SENTENCIA:  SELECT indexrelname, idx_blks_read
+	FROM pg_statio_user_indexes
+	WHERE indexrelname IN ('idx_hash_precio', 'idx_arbol_precio', 'idx_hash_id');
+[09066309P 08134385K] ::1(24357)ERROR:  transacción abortada, las órdenes serán ignoradas hasta el fin de bloque de transacción
+[09066309P 08134385K] ::1(24357)SENTENCIA:  SELECT pg_stat_reset();
+[09066309P 08134385K] ::1(24362)ERROR:  no existe la columna «blks_read» en carácter 8
+[09066309P 08134385K] ::1(24362)SENTENCIA:  SELECT blks_read, blks_hit FROM pg_stat_user_tables WHERE relname = 'productos';
+[09066309P 08134385K] ::1(24362)ERROR:  transacción abortada, las órdenes serán ignoradas hasta el fin de bloque de transacción
+[09066309P 08134385K] ::1(24362)SENTENCIA:  SELECT relname, blks_read, blks_hit
+	FROM pg_statio_user_tables
+	WHERE relname = 'productos';
+[09066309P 08134385K] ::1(24362)ERROR:  transacción abortada, las órdenes serán ignoradas hasta el fin de bloque de transacción
+[09066309P 08134385K] ::1(24362)SENTENCIA:  SELECT indexrelname, idx_blks_read
+	FROM pg_statio_user_indexes
+	WHERE indexrelname IN ('idx_hash_precio', 'idx_arbol_precio', 'idx_hash_id');
+[09066309P 08134385K] ::1(24362)ERROR:  transacción abortada, las órdenes serán ignoradas hasta el fin de bloque de transacción
+[09066309P 08134385K] ::1(24362)SENTENCIA:  SELECT pg_stat_reset();
+[09066309P 08134385K] ::1(24376)ERROR:  no existe la columna «blks_read» en carácter 17
+[09066309P 08134385K] ::1(24376)SENTENCIA:  SELECT relname, blks_read, blks_hit
+	FROM pg_statio_user_tables
+	WHERE relname = 'productos';
+[09066309P 08134385K] ::1(24376)ERROR:  transacción abortada, las órdenes serán ignoradas hasta el fin de bloque de transacción
+[09066309P 08134385K] ::1(24376)SENTENCIA:  SELECT indexrelname, idx_blks_read
+	FROM pg_statio_user_indexes
+	WHERE indexrelname IN ('idx_hash_precio', 'idx_arbol_precio', 'idx_hash_id');
+[09066309P 08134385K] ::1(24376)ERROR:  transacción abortada, las órdenes serán ignoradas hasta el fin de bloque de transacción
+[09066309P 08134385K] ::1(24376)SENTENCIA:  SELECT pg_stat_reset();
+[09066309P 08134385K] ::1(24433)ERROR:  no existe la columna «relname» en carácter 8
+[09066309P 08134385K] ::1(24433)HINT:  Probablemente quiera hacer referencia a la columna «pg_stat_database.datname».
+[09066309P 08134385K] ::1(24433)SENTENCIA:  SELECT relname, blks_read, blks_hit
+	FROM pg_stat_database
+	WHERE datname = current_database();
+[09066309P 08134385K] ::1(24433)ERROR:  transacción abortada, las órdenes serán ignoradas hasta el fin de bloque de transacción
+[09066309P 08134385K] ::1(24433)SENTENCIA:  SELECT indexrelname, idx_blks_read
+	FROM pg_statio_user_indexes
+	WHERE indexrelname IN ('idx_hash_precio', 'idx_arbol_precio', 'idx_hash_id');
+[09066309P 08134385K] ::1(24433)ERROR:  transacción abortada, las órdenes serán ignoradas hasta el fin de bloque de transacción
+[09066309P 08134385K] ::1(24433)SENTENCIA:  SELECT pg_stat_reset();
+[09066309P 08134385K] ::1(24668)WARNING:  no hay una transacción en curso
+[09066309P 08134385K] ::1(24668)SENTENCIA:  COMMIT;
+[09066309P 08134385K] ::1(24700)WARNING:  no hay una transacción en curso
+[09066309P 08134385K] ::1(24700)SENTENCIA:  COMMIT;
+[09066309P 08134385K] ::1(25087)WARNING:  no hay una transacción en curso
+[09066309P 08134385K] ::1(25087)SENTENCIA:  COMMIT;
+[09066309P 08134385K] ::1(25936)WARNING:  no hay una transacción en curso
+[09066309P 08134385K] ::1(25936)SENTENCIA:  COMMIT;
+[09066309P 08134385K] ::1(26425)WARNING:  no hay una transacción en curso
+[09066309P 08134385K] ::1(26425)SENTENCIA:  COMMIT;
+[09066309P 08134385K] ::1(27607)WARNING:  no hay una transacción en curso
+[09066309P 08134385K] ::1(27607)SENTENCIA:  COMMIT;
+[09066309P 08134385K] ::1(28004)ERROR:  error de sintaxis en o cerca de «pg_sleep» en carácter 1
+[09066309P 08134385K] ::1(28004)SENTENCIA:  pg_sleep(5);
+[09066309P 08134385K] ::1(28004)ERROR:  transacción abortada, las órdenes serán ignoradas hasta el fin de bloque de transacción
+[09066309P 08134385K] ::1(28004)SENTENCIA:  SELECT blks_read, blks_hit
+	FROM pg_stat_database
+	WHERE datname = current_database();
+[09066309P 08134385K] ::1(28004)ERROR:  transacción abortada, las órdenes serán ignoradas hasta el fin de bloque de transacción
+[09066309P 08134385K] ::1(28004)SENTENCIA:  SELECT *
+	FROM pg_statio_user_indexes;
+[09066309P 08134385K] ::1(28113)WARNING:  no hay una transacción en curso
+[09066309P 08134385K] ::1(28113)SENTENCIA:  COMMIT;
+[09066309P 08134385K] ::1(28438)ERROR:  error de sintaxis en o cerca de «exes» en carácter 1
+[09066309P 08134385K] ::1(28438)SENTENCIA:  exes;
+[09066309P 08134385K] ::1(28438)WARNING:  no hay una transacción en curso
+[09066309P 08134385K] ::1(28438)SENTENCIA:  COMMIT;
+[09066309P 08134385K] ::1(29566)ERROR:  cancelando la sentencia debido a una petición del usuario
+[09066309P 08134385K] ::1(29566)SENTENCIA:  SELECT COUNT(DISTINCT(precio)) FROM productos;
+[09066309P 08134385K] ::1(29866)ERROR:  cancelando la sentencia debido a una petición del usuario
+[09066309P 08134385K] ::1(29866)SENTENCIA:  EXPLAIN (ANALYZE, BUFFERS) SELECT COUNT(DISTINCT(precio)) FROM productos;
+[09066309P 08134385K] ::1(30036)ERROR:  cancelando la sentencia debido a una petición del usuario
+[09066309P 08134385K] ::1(30036)SENTENCIA:  SELECT COUNT(DISTINCT(precio)) FROM productos;
+[09066309P 08134385K] ::1(30192)WARNING:  ya hay una transacción en curso
+[09066309P 08134385K] ::1(30192)SENTENCIA:  BEGIN;
+[09066309P 08134385K] ::1(30192)ERROR:  cancelando la sentencia debido a una petición del usuario
+[09066309P 08134385K] ::1(30192)SENTENCIA:  EXPLAIN (ANALYZE, BUFFERS) SELECT COUNT(DISTINCT(precio)) FROM productos;
+[09066309P 08134385K] ::1(30217)ERROR:  cancelando la sentencia debido a una petición del usuario
+[09066309P 08134385K] ::1(30217)SENTENCIA:  SELECT COUNT(DISTINCT(precio)) FROM productos;
+[09066309P 08134385K] ::1(30570)LOG:  sentencia: EXPLAIN (ANALYZE, BUFFERS) INSERT INTO productos (producto_id, nombre, stock, precio) VALUES (25000001, 'prod_25000001', 100, 1000);
+[09066309P 08134385K] ::1(30570)LOG:  sentencia: INSERT INTO productos (producto_id, nombre, stock, precio) VALUES (25000001, 'prod_25000001', 100, 1000);
+[09066309P 08134385K] ::1(30570)ERROR:  llave duplicada viola restricción de unicidad «productos_pkey»
+[09066309P 08134385K] ::1(30570)DETALLE:  Ya existe la llave (producto_id)=(25000001).
+[09066309P 08134385K] ::1(30570)SENTENCIA:  INSERT INTO productos (producto_id, nombre, stock, precio) VALUES (25000001, 'prod_25000001', 100, 1000);
+[09066309P 08134385K] ::1(30570)ERROR:  error de sintaxis en o cerca de «producto_id» en carácter 34
+[09066309P 08134385K] ::1(30570)SENTENCIA:  SELECT * FROM productos ORDER_BY producto_id DESC LIMIT 1;
+[09066309P 08134385K] ::1(30570)ERROR:  error de sintaxis en o cerca de «producto_id» en carácter 34
+[09066309P 08134385K] ::1(30570)SENTENCIA:  SELECT * FROM productos ORDER_BY producto_id DESC LIMIT 1;
+[09066309P 08134385K] ::1(30620)LOG:  sentencia: EXPLAIN (ANALYZE, BUFFERS) INSERT INTO productos (producto_id, nombre, stock, precio) VALUES (250000001, 'prod_25000001', 100, 1000);
+[09066309P 08134385K] ::1(30620)LOG:  sentencia: INSERT INTO productos (producto_id, nombre, stock, precio) VALUES (250000001, 'prod_25000001', 100, 1000);
+[09066309P 08134385K] ::1(30620)ERROR:  llave duplicada viola restricción de unicidad «productos_pkey»
+[09066309P 08134385K] ::1(30620)DETALLE:  Ya existe la llave (producto_id)=(250000001).
+[09066309P 08134385K] ::1(30620)SENTENCIA:  INSERT INTO productos (producto_id, nombre, stock, precio) VALUES (250000001, 'prod_25000001', 100, 1000);
+[09066309P 08134385K] ::1(30646)LOG:  sentencia: INSERT INTO productos (producto_id, nombre, stock, precio) VALUES (25000001, 'prod_25000001', 100, 1000);
+[09066309P 08134385K] LOG:  empezando checkpoint: time
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 9 búfers (0.1%); 0 archivos WAL añadidos, 0 eliminados, 29 reciclados; write=0.887 s, sync=0.033 s, total=1.011 s; archivos sincronizados=21, más largo=0.019 s, promedio=0.002 s; distancia=485822 kB, estimación=536835 kB; lsn=1E/E7D8BD18, lsn de redo=1E/E7D8BCE0
+[09066309P 08134385K] ::1(30665)LOG:  sentencia: DELETE FROM productos WHERE producto_id = 25000001;
+[09066309P 08134385K] ::1(30665)LOG:  sentencia: EXPLAIN (ANALYZE, BUFFERS) INSERT INTO productos (producto_id, nombre, stock, precio) VALUES (25000001, 'prod_25000001', 100, 1000);
+[09066309P 08134385K] ::1(30665)ERROR:  error de sintaxis en o cerca de «producto_id» en carácter 34
+[09066309P 08134385K] ::1(30665)SENTENCIA:  SELECT * FROM productos ORDER_BY producto_id DESC LIMIT 1;
+[09066309P 08134385K] ::1(30731)LOG:  sentencia: DELETE FROM productos WHERE producto_id = 25000001;
+[09066309P 08134385K] ::1(30731)LOG:  sentencia: EXPLAIN (ANALYZE, BUFFERS) INSERT INTO productos (producto_id, nombre, stock, precio) VALUES (25000001, 'prod_25000001', 100, 1000);
+[09066309P 08134385K] ::1(30731)LOG:  sentencia: EXPLAIN (ANALYZE, BUFFERS) UPDATE productos SET stock = 2000 WHERE producto_id = 25000001;
+[09066309P 08134385K] ::1(30731)LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+[09066309P 08134385K] LOG:  empezando checkpoint: time
+[09066309P 08134385K] LOG:  checkpoint completo: escritos 8 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.773 s, sync=0.005 s, total=0.795 s; archivos sincronizados=6, más largo=0.002 s, promedio=0.001 s; distancia=28 kB, estimación=483154 kB; lsn=1E/E7D92DF8, lsn de redo=1E/E7D92DC0
+[09066309P 08134385K] ::1(20320)WARNING:  ya hay una transacción en curso
+[09066309P 08134385K] ::1(20320)SENTENCIA:  BEGIN;
+[09066309P 08134385K] ::1(20376)WARNING:  ya hay una transacción en curso
+[09066309P 08134385K] ::1(20376)SENTENCIA:  BEGIN;
