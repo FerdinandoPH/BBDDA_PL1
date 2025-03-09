@@ -42,7 +42,10 @@ SELECT pg_stat_reset();
 SET max_parallel_workers_per_gather = 0;
 DISCARD PLANS;
 \o salida.txt
+-- Elegir consulta a analizar
 SELECT * FROM productos3 WHERE stock = 200;
+-- SELECT * FROM productos3 WHERE stock = 100 OR stock = 200 OR stock = 300;
+-- SELECT * FROM productos3 WHERE stock > 100 AND stock < 200;
 \o
 SHOW max_parallel_workers_per_gather;
 
